@@ -3,36 +3,37 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include "conio.h"
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-void printVector(vector<int> vectorForFunc)
+void PrintVector(vector<int>& vectorForFunc)
 {
-	for (int i=0; i<vectorForFunc.size(); i++)
+	for (int i = 0; i < vectorForFunc.size(); i++)
 	{
-	cout<<vectorForFunc[i]<<"  ";
+	cout << vectorForFunc[i] << "  ";
 	}
-	cout<<"\n";
+	cout << "\n";
 };
 
-bool isEqual(vector<int> VB, vector<int> VA)
+bool IsEqual(const vector<int>& sortVec, const vector<int>& vecShould)
 {
-	bool equality=true;
-	if (VB.size()==VA.size())
-	{
-	for(int i=1; i<VB.size(); i++)
-		if (VB[i]!=VA[i])
-		{
-		equality=false;
-		}
-	}
-	else equality=false;
-	return equality;
+	return equal(sortVec.begin(), sortVec.end(), vecShould.begin());
 }
 
-int _tmain(int argc, _TCHAR* argv[])
+void CheckResults(bool res)
+{
+	if (res)
+	{
+		 cout << "Right\n";
+	}
+	else 
+	{	
+		cout << "Wrong\n";
+	}
+}
+
+void TestSort()
 {
 	vector<int> vectorForTest;
 	vector<int> vectorShouldBe;
@@ -43,17 +44,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	vectorShouldBe.push_back(15);
 	vectorShouldBe.push_back(90);
 
-	printVector(vectorForTest);
-	printVector(vectorShouldBe);
+	PrintVector(vectorForTest);
+	PrintVector(vectorShouldBe);
 	
 	sort(vectorForTest.begin(), vectorForTest.end());
 
-	if (isEqual(vectorForTest, vectorShouldBe))
-		cout<<"Right\n";
-	else cout<<"Wrong\n";
+	CheckResults(IsEqual(vectorForTest, vectorShouldBe));
+	
+	PrintVector(vectorForTest);
+}
 
-	printVector(vectorForTest);
-	getch();
+int _tmain(int argc, _TCHAR* argv[])
+{
+	TestSort();
+	cin.get();
 	return 0;
 }
 
