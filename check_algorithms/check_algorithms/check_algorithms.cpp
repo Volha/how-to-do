@@ -11,7 +11,7 @@ void PrintVector(vector<int>& vectorForFunc)
 {
 	for (int i = 0; i < vectorForFunc.size(); i++)
 	{
-	cout << vectorForFunc[i] << "  ";
+		cout << vectorForFunc[i] << "  ";
 	}
 	cout << "\n";
 };
