@@ -48,7 +48,6 @@ void TestSort()
 	PrintVector(vectorShouldBe);
 	
 	sort(vectorForTest.begin(), vectorForTest.end());
-
 	CheckResults(IsEqual(vectorForTest, vectorShouldBe));
 	
 	PrintVector(vectorForTest);
