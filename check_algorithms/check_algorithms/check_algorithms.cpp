@@ -103,8 +103,6 @@ void TestFind()
 	cout << "The first found value in set of similar elements: ";
 	CheckResults((vecForTest.begin() == find(vecForTest.begin(), vecForTest.end(), 555)));
 	vecForTest.erase(vecForTest.begin(), vecForTest.end());
-	vecForTest.push_back(4);
-	cout << "The first found value in set of one element: ";
 }
 
 int _tmain(int argc, _TCHAR* argv[])
