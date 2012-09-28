@@ -105,6 +105,25 @@ void TestFind()
 	vecForTest.erase(vecForTest.begin(), vecForTest.end());
 }
 
+void TestBinarySearch()
+{
+	vector<int> vecForTest;
+	vecForTest.push_back(0);
+	vecForTest.push_back(5);
+	vecForTest.push_back(100);
+	vecForTest.push_back(555);
+	cout << "Even numbers of elements: ";
+	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
+	cout << "The element, which is not in the set: ";
+	CheckResults(!binary_search(vecForTest.begin(), vecForTest.end(), 10));
+	vecForTest.erase(vecForTest.begin()+1, vecForTest.end());
+	cout << "One element: ";
+	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
+	cout << "No elements: ";
+	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
+
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	argc;argv;
@@ -112,6 +131,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	TestSort();
 	cout << "FIND\n";
 	TestFind();
+	cout << "BINARY_SEARCH\n";
+	TestBinarySearch();
 	cin.get();
 	return 0;
 }
