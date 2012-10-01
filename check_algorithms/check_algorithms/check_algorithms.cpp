@@ -112,7 +112,7 @@ void TestBinarySearch()
 	vecForTest.push_back(5);
 	vecForTest.push_back(100);
 	vecForTest.push_back(555);
-	cout << "Even numbers of elements: ";
+	cout << "Simple search: ";
 	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
 	cout << "The element, which is not in the set: ";
 	CheckResults(!binary_search(vecForTest.begin(), vecForTest.end(), 10));
@@ -120,9 +120,43 @@ void TestBinarySearch()
 	cout << "One element: ";
 	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
 	cout << "No elements: ";
-	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
+	CheckResults(!binary_search(vecForTest.begin(), vecForTest.end(), 0));
 
 }
+
+class CheckFE {
+  public:
+   CheckFE() : num(0), sum(0) {}
+   size_t num;    
+   int sum; 
+   void operator() (int elem) {
+        num++;          
+        sum += elem;    
+    }
+};
+
+void TestForEach()
+{
+	vector<int> vecForTest;
+	vecForTest.push_back(0);
+	vecForTest.push_back(5);
+	vecForTest.push_back(10);
+	vecForTest.push_back(7);
+	CheckFE chFE = for_each(
+		vecForTest.begin(), 
+		vecForTest.end(), 
+		CheckFE());
+	cout << " Simple checking for_each: ";
+	CheckResults((chFE.num == vecForTest.size())&&(chFE.sum == 22));
+	cout << " No elements: ";
+	vecForTest.erase(vecForTest.begin(), vecForTest.end());
+	chFE = for_each(
+		vecForTest.begin(), 
+		vecForTest.end(), 
+		CheckFE());
+	CheckResults((chFE.num == vecForTest.size())&&(chFE.sum == 0));
+};
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -133,6 +167,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	TestFind();
 	cout << "BINARY_SEARCH\n";
 	TestBinarySearch();
+	cout << "FOR_EACH\n";
+	TestForEach();
+	cout << "ACCUMULATE\n";
+
 	cin.get();
 	return 0;
 }
