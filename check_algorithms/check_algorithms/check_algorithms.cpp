@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <numeric>
+
 using namespace std;
 
 void Print(int i)
@@ -57,7 +59,7 @@ void CheckResults(bool res)
 	}
 	else 
 	{	
-		cout << "wrong\n";
+		cout << "!!!!ACHTUNG!!!!\n";
 	}
 }
 
@@ -71,15 +73,13 @@ void TestSort()
 	vectorShouldBe.push_back(2);
 	vectorShouldBe.push_back(15);
 	vectorShouldBe.push_back(90);
-
+	
+	cout << "Simple sort: ";
 	sort(vectorForTest.begin(), vectorForTest.end());
 	CheckResults(IsEqual(vectorForTest, vectorShouldBe));
-	
+	cout << "One element: ";
 	vectorForTest.erase(vectorForTest.begin(), vectorForTest.end());
 	vectorForTest.push_back(3);
-	vectorShouldBe.erase(vectorShouldBe.begin(),vectorShouldBe.end());
-	vectorShouldBe.push_back(3);
-
 	sort(vectorForTest.begin(),vectorForTest.end());
 	CheckResults(IsEqual(vectorForTest, vectorShouldBe));
 	
@@ -120,6 +120,7 @@ void TestBinarySearch()
 	cout << "One element: ";
 	CheckResults(binary_search(vecForTest.begin(), vecForTest.end(), 0));
 	cout << "No elements: ";
+	vecForTest.erase(vecForTest.begin(), vecForTest.end());
 	CheckResults(!binary_search(vecForTest.begin(), vecForTest.end(), 0));
 
 }
@@ -157,20 +158,80 @@ void TestForEach()
 	CheckResults((chFE.num == vecForTest.size())&&(chFE.sum == 0));
 };
 
+void TestAccumulate()
+{
+	//summ
+	vector<int> vecForTest;
+	vecForTest.push_back(0);
+	vecForTest.push_back(5);
+	vecForTest.push_back(10);
+	vecForTest.push_back(20);
+	cout << "Simple check sum: ";
+	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 0) == 35);
+	cout << "No elements sum: ";
+	vecForTest.erase(vecForTest.begin(), vecForTest.end());
+	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 0) == 0);
+	cout << "One elements sum: ";
+	vecForTest.push_back(5);
+	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 0) == 5);
+	//multiplication
+	vecForTest.erase(vecForTest.begin(), vecForTest.end());
+	vecForTest.push_back(0);
+	vecForTest.push_back(5);
+	vecForTest.push_back(10);
+	vecForTest.push_back(20);
+	cout << "Simple check mult: ";
+	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 1, multiplies<int>()) == 0);
+	cout << "No elements mult: ";
+	vecForTest.erase(vecForTest.begin(), vecForTest.end());
+	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 1, multiplies<int>()) == 1);
+	cout << "One elements is 0 mult: ";
+	vecForTest.push_back(5);
+	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 0, multiplies<int>()) == 0);
+}
+int increment(int i) { return ++i; }
+int sum(int a, int b) { return a+b; }
+
+void TestTransform()
+{
+  vector<int> test1;
+  vector<int> res;
+  vector<int> checked;
+  for(int i=1; i<5; i++) test1.push_back (i*i);                    // test1: 1 4 9  16 
+ 
+  vector<int> test2(test1.size());
+  transform(test1.begin(), test1.end(), test2.begin(), increment);       // test2: 2 5 10 17 
+  cout << "Unary operation: ";
+  checked.push_back(2);
+  checked.push_back(5);
+  checked.push_back(10);
+  checked.push_back(17);
+  CheckResults(IsEqual(res, checked));
+  cout << "Binary operation: ";
+  checked.erase(checked.begin(), checked.end());
+  checked.push_back(3);
+  checked.push_back(9);
+  checked.push_back(19);
+  checked.push_back(33);
+  transform(test1.begin(), test1.end(), test2.begin(), test1.begin(), sum); // test1: 3 9 19 33 
+  CheckResults(IsEqual(test1, checked));
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	argc;argv;
-	cout << "SORT\n";
+	cout << "\nSORT\n";
 	TestSort();
-	cout << "FIND\n";
+	cout << "\nFIND\n";
 	TestFind();
-	cout << "BINARY_SEARCH\n";
+	cout << "\nBINARY_SEARCH\n";
 	TestBinarySearch();
-	cout << "FOR_EACH\n";
+	cout << "\nFOR_EACH\n";
 	TestForEach();
-	cout << "ACCUMULATE\n";
-
+	cout << "\nACCUMULATE\n";
+	TestAccumulate();
+	cout << "\nTRANSFORM\n";
+	TestTransform();
 	cin.get();
 	return 0;
 }
