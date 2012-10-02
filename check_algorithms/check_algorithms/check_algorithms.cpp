@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include <iterator>
 
 using namespace std;
 
@@ -48,7 +49,11 @@ void PrintVector(vector<int>& vectorForFunc)
 
 bool IsEqual(const vector<int>& sortVec, const vector<int>& vecShould)
 {
+	if (sortVec.size() == vecShould.size())
+	{
 	return equal(sortVec.begin(), sortVec.end(), vecShould.begin());
+	}
+	else return false;
 }
 
 void CheckResults(bool res)
@@ -193,30 +198,48 @@ void TestAccumulate()
 void TestTransform()
 {
   vector<int> test1;
-  vector<int> res;
+  vector<int> checked1;
   vector<int> checked;
-  for(int i = 1; i < 5; i++) test1.push_back (i * i);                    // test1: 1 4 9  16 
+  for(int i = 1; i < 5; i++) 
+  {
+	test1.push_back (i * i);                    // test1: 1 4 9  16 
+	checked1.push_back (i * i);
+  }
  
-  vector<int> test2(test1.size());
-  transform(test1.begin(), test1.end(), test2.begin(), [](int i){return ++i;});       // test2: 2 5 10 17 
-  cout << "Unary operation: ";
+  //vector<int> test2(test1.size());
+  //transform(test1.begin(), test1.end(), test2.begin(), [](int i){return ++i;});       // test2: 2 5 10 17
+
+  vector<int> test2p;
+  transform(test1.begin(), test1.end(), back_inserter(test2p), [](int i){return ++i;});       // test2: 2 5 10 17
+
+
+  cout << "Unary operation, the first is the same: ";
   checked.push_back(2);
   checked.push_back(5);
   checked.push_back(10);
   checked.push_back(17);
-  PrintVector(res);
-  CheckResults(IsEqual(res, checked));
-  cout << "Binary operation: ";
+  CheckResults(IsEqual(test1, checked1));
+  cout << "Unary operation, the second has changed: ";
+  CheckResults(IsEqual(test2p, checked));
+
+  cout << "Binary operation, the first is the same: ";
   checked.erase(checked.begin(), checked.end());
   checked.push_back(3);
   checked.push_back(9);
   checked.push_back(19);
   checked.push_back(33);
-  transform(test1.begin(), test1.end(), test2.begin(), test1.begin(), [](int i, int j){return i+j;}); // test1: 3 9 19 33 
-  CheckResults(IsEqual(test1, checked));
+  transform(test1.begin(), test1.end(), test2p.begin(), test2p.begin(), [](int i, int j){return i + j;}); // test1: 3 9 19 33 
+  CheckResults(IsEqual(test1, checked1));   
+  cout << "Binary operation, the second has changed: ";
+  CheckResults(IsEqual(test2p, checked));
 
-
-}
+  cout << "No elements: ";
+  test1.erase(test1.begin(), test1.end());
+  checked.erase(checked.begin(), checked.end());
+  test2p.erase(test2p.begin(), test2p.end());
+  transform(test1.begin(), test1.end(), test2p.begin(),[](int i){return ++i;});
+  CheckResults(IsEqual(test2p, checked));
+ }
 
 int _tmain(int argc, _TCHAR* argv[])
 {
