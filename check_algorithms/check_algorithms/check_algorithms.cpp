@@ -189,23 +189,22 @@ void TestAccumulate()
 	vecForTest.push_back(5);
 	CheckResults(accumulate(vecForTest.begin(), vecForTest.end(), 0, multiplies<int>()) == 0);
 }
-int increment(int i) { return ++i; }
-int sum(int a, int b) { return a+b; }
 
 void TestTransform()
 {
   vector<int> test1;
   vector<int> res;
   vector<int> checked;
-  for(int i=1; i<5; i++) test1.push_back (i*i);                    // test1: 1 4 9  16 
+  for(int i = 1; i < 5; i++) test1.push_back (i * i);                    // test1: 1 4 9  16 
  
   vector<int> test2(test1.size());
-  transform(test1.begin(), test1.end(), test2.begin(), increment);       // test2: 2 5 10 17 
+  transform(test1.begin(), test1.end(), test2.begin(), [](int i){return ++i;});       // test2: 2 5 10 17 
   cout << "Unary operation: ";
   checked.push_back(2);
   checked.push_back(5);
   checked.push_back(10);
   checked.push_back(17);
+  PrintVector(res);
   CheckResults(IsEqual(res, checked));
   cout << "Binary operation: ";
   checked.erase(checked.begin(), checked.end());
@@ -213,8 +212,10 @@ void TestTransform()
   checked.push_back(9);
   checked.push_back(19);
   checked.push_back(33);
-  transform(test1.begin(), test1.end(), test2.begin(), test1.begin(), sum); // test1: 3 9 19 33 
+  transform(test1.begin(), test1.end(), test2.begin(), test1.begin(), [](int i, int j){return i+j;}); // test1: 3 9 19 33 
   CheckResults(IsEqual(test1, checked));
+
+
 }
 
 int _tmain(int argc, _TCHAR* argv[])
