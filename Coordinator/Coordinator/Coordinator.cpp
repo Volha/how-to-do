@@ -10,7 +10,7 @@ void BackgroundTask(int start, int finish)
 	for(int i = start; i < finish; ++i)
 	{
 		double di = static_cast<double>(i);
-		double d = std::sqrt(std::sqrt(di) + std::sqrt(di+ 1));
+		double d = std::sqrt(std::sqrt(di) + std::sqrt(di + 1));
 		d = d - 8;	
 	}
 }
@@ -21,15 +21,16 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	for (;;)
 	{
-		
 		pool.DoAsync([]()
 			{
-				BackgroundTask(100, 20000);
+				//BackgroundTask(100, 20000);
+				handler->WaitUntilProgressChanged();
+				auto p = handler->GetProgress();
+				std::cout << "\r" << p << "%";
 				// connect to server
 				// download file
 			}
 		);
-		
 	}
 
 	return 0;

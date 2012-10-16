@@ -1,5 +1,4 @@
 #pragma once
-#include "WorkerThread.h"
 #include <vector>
 #include <queue>
 #include <boost\function.hpp>
