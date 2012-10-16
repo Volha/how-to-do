@@ -1,30 +1,48 @@
 #include "StdAfx.h"
 #include "ThreadPool.h"
-#include <boost\thread\thread.hpp>
+#include <iostream>
 
-
-
-ThreadPool::ThreadPool(void)
-{
-
-}
 
 ThreadPool::ThreadPool(int threadNumber)
 {
-	std::vector<boost::thread> vecThreads;
-	this->m_threadNumber = threadNumber;
-	for(int i; i < threadNumber; ++i)
+	for(int i = 0; i < threadNumber; ++i)
 	{
-		vecThreads.push_back(boost::thread());
+		m_threads.push_back(boost::thread(
+			[this]()
+			{
+				MonitorQueue();
+			}
+		));
 	}
-};
-
-
-ThreadPool::~ThreadPool(void)
-{
 }
 
-void ThreadPool::Initialize()
+void ThreadPool::DoAsync(Functor f)
 {
+	Lock lock(m_mutex);
+	m_queue.push(f);
+	m_condition.notify_one();
+}
 
+void ThreadPool::MonitorQueue()
+{
+	while (true)
+	{
+		Functor f = GetFunctor();
+		if (f)
+		{
+			f();
+		}
+	}
+}
+
+ThreadPool::Functor ThreadPool::GetFunctor()
+{
+	Lock lock(m_mutex);
+	Functor f;
+	if (!m_queue.empty())
+	{
+		f = m_queue.back();
+		m_queue.pop();
+	}
+	return f;
 }
