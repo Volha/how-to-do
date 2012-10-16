@@ -29,9 +29,11 @@ void BackgroundTask(HandlerPtr handler, int start, int finish)
 	}
 }
 
+#include "..\mylib\mylib.h"
 int main(int argc, char* argv[])
 {
-	const size_t THREAD_COUNT = 1;
+	std::cout << GetAnswer();
+	const size_t THREAD_COUNT = 2;
 	HandlerPtr handler = std::make_shared<HandlerClass>();
 	std::vector<boost::thread> threads;
 	int subTaskSize = TASK_SIZE / THREAD_COUNT; 
@@ -41,6 +43,7 @@ int main(int argc, char* argv[])
 		threads.push_back(boost::thread(&BackgroundTask, handler, subTaskStart, subTaskSize + subTaskStart));
 		subTaskStart += subTaskSize;
 	}
+	boost::thread()
 	for (;;)
 	{
 		handler->WaitUntilProgressChanged();

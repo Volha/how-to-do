@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boost_test", "boost_test\boost_test.vcxproj", "{E645E7BB-47A8-44DD-8E9F-C0BA1ED9D198}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mylib", "mylib\mylib.vcxproj", "{39B41B68-7241-4C9A-A60C-15483BDD7A1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +15,10 @@ Global
 		{E645E7BB-47A8-44DD-8E9F-C0BA1ED9D198}.Debug|Win32.Build.0 = Debug|Win32
 		{E645E7BB-47A8-44DD-8E9F-C0BA1ED9D198}.Release|Win32.ActiveCfg = Release|Win32
 		{E645E7BB-47A8-44DD-8E9F-C0BA1ED9D198}.Release|Win32.Build.0 = Release|Win32
+		{39B41B68-7241-4C9A-A60C-15483BDD7A1B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{39B41B68-7241-4C9A-A60C-15483BDD7A1B}.Debug|Win32.Build.0 = Debug|Win32
+		{39B41B68-7241-4C9A-A60C-15483BDD7A1B}.Release|Win32.ActiveCfg = Release|Win32
+		{39B41B68-7241-4C9A-A60C-15483BDD7A1B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
