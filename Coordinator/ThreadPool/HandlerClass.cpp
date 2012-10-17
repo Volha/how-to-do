@@ -15,7 +15,7 @@ void HandlerClass::OnProgress(int i)
 {
 	Lock lock(m_mutex);
 	m_progress = i;
-	m_condition.notify_one();
+	m_condition.notify_all();
 };
 
 int HandlerClass::GetProgress() const
@@ -33,5 +33,5 @@ void HandlerClass::IncrementProgress()
 {
 	Lock lock(m_mutex);
 	++m_progress;
-	m_condition.notify_one();
+	m_condition.notify_all();
 };
