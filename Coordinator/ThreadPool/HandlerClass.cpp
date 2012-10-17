@@ -29,6 +29,7 @@ void HandlerClass::WaitUntilProgressChanged()
 	Lock lock(m_mutex);
 	m_condition.wait(lock);
 };
+
 void HandlerClass::IncrementProgress()
 {
 	Lock lock(m_mutex);

@@ -4,7 +4,9 @@
 
 
 ThreadPool::ThreadPool(int threadNumber)
+	: m_isWorking(true)
 {
+	
 	for(int i = 0; i < threadNumber; ++i)
 	{
 		m_threads.push_back(boost::thread(
@@ -16,6 +18,22 @@ ThreadPool::ThreadPool(int threadNumber)
 	}
 }
 
+ThreadPool::~ThreadPool()
+{
+	SendStopCycle();
+	for(size_t i = 0; i < m_threads.size(); ++i)
+	{
+		m_threads[i].join();
+	}
+}
+
+void ThreadPool::SendStopCycle()
+{
+		Lock lock(m_mutex);
+		m_isWorking = false;
+		m_condition.notify_all();
+}
+
 void ThreadPool::DoAsync(Functor f)
 {
 	Lock lock(m_mutex);
@@ -23,17 +41,30 @@ void ThreadPool::DoAsync(Functor f)
 	m_condition.notify_one();
 }
 
+bool ThreadPool::CheckIsWorking()
+{
+	Lock lock(m_mutex);
+	return m_isWorking;
+}
+
 void ThreadPool::MonitorQueue()
 {
-	while (true)
-	{
+	while (CheckIsWorking())
+	{	
 		Functor f = GetFunctor();
 		if (f)
 		{
 			f();
 		}
+		else WaitUntilProcessAppears();
 	}
 }
+
+void ThreadPool::WaitUntilProcessAppears()
+{
+	Lock lock(m_mutex);
+	m_condition.wait(lock);
+};
 
 ThreadPool::Functor ThreadPool::GetFunctor()
 {

@@ -15,14 +15,19 @@ public:
 	typedef boost::function<void ()> Functor;
 
 	ThreadPool(int threadNumber);
+	~ThreadPool();
 	void DoAsync(Functor f);
 private:
 	void MonitorQueue();
 	Functor GetFunctor();
+	void SendStopCycle();
+	bool CheckIsWorking();
+	void WaitUntilProcessAppears();
 private:
 	std::vector<boost::thread> m_threads;
 	std::queue<Functor> m_queue;
 	mutable Mutex m_mutex;
 	boost::condition_variable m_condition;
+	bool m_isWorking;
 };
 
