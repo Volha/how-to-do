@@ -7,7 +7,7 @@ ThreadPool::ThreadPool(int threadNumber)
 	: m_isWorking(true)
 {
 	
-	for(int i = 0; i < threadNumber; ++i)
+	for(size_t i = 0; i < threadNumber; ++i)
 	{
 		m_threads.push_back(boost::thread(
 			[this]()

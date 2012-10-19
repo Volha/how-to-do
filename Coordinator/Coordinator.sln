@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Coordinator", "Coordinator\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadPool", "ThreadPool\ThreadPool.vcxproj", "{5B972819-E043-41D4-AA48-06FE45C5AB1B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadPoolTester", "ThreadPoolTester\ThreadPoolTester.vcxproj", "{55674920-5F5E-4541-A059-76C77A16FFB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{5B972819-E043-41D4-AA48-06FE45C5AB1B}.Debug|Win32.Build.0 = Debug|Win32
 		{5B972819-E043-41D4-AA48-06FE45C5AB1B}.Release|Win32.ActiveCfg = Release|Win32
 		{5B972819-E043-41D4-AA48-06FE45C5AB1B}.Release|Win32.Build.0 = Release|Win32
+		{55674920-5F5E-4541-A059-76C77A16FFB4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55674920-5F5E-4541-A059-76C77A16FFB4}.Debug|Win32.Build.0 = Debug|Win32
+		{55674920-5F5E-4541-A059-76C77A16FFB4}.Release|Win32.ActiveCfg = Release|Win32
+		{55674920-5F5E-4541-A059-76C77A16FFB4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
