@@ -24,12 +24,11 @@ BOOL				AddTask(HWND, int);
 
 namespace
 {
-	
 	const int INT_DIV = 10000000;
 	const int TASK_SIZE = 1000000000;
 	const int FUNCTION_PARTS = 2;
 	const int WM_TASK_FINISHED = ::RegisterWindowMessage(L"TaskFinishedMessage");
-
+	
 	class Handler
 	{
 	public:
@@ -167,7 +166,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, hInstance, NULL);
-
    if (!hWnd)
    {
       return FALSE;
@@ -204,6 +202,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		}
 		return 0;
 	}
+
 
 	switch (message)
 	{
@@ -279,6 +278,8 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 BOOL AddTask(HWND hWnd, int functionParts)
 {
+
+	
 	HWND progressWindow = CreateWindowEx(0, PROGRESS_CLASS, NULL,
 									WS_CHILD | WS_VISIBLE,
 									30, 30, 400, 30,
@@ -288,7 +289,7 @@ BOOL AddTask(HWND hWnd, int functionParts)
 	HandlerPtr handler = std::make_shared<Handler>(hWnd, progressWindow);
 	
 	int subTaskStart = 0;
-	int subTaskSize =  TASK_SIZE / functionParts;
+	int subTaskSize = TASK_SIZE / functionParts;
 	
 	for (size_t i = 0; i < functionParts; ++i)
 	{

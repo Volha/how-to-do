@@ -3,7 +3,7 @@
 #include "ThreadPoolClass.h"
 
 namespace Tasks
-{
+{ 
 	ThreadPoolClass pool(4);
 	
 	Task::Task()
