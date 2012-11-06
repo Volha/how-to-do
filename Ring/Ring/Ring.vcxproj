@@ -75,9 +75,13 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bazuka.h" />
+    <ClInclude Include="GunWeapon.h" />
+    <ClInclude Include="RealGunWeapon.h" />
     <ClInclude Include="RingClass.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ring.cpp" />
