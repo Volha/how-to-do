@@ -66,8 +66,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	std::vector<Weapon*> weapons;
 	weapons.push_back(new GunWeapon("Gun"));
-	weapons.push_back(new RealGunWeapon("Gun"));
-	weapons.push_back(new Bazuka("Gun"));
+	weapons.push_back(new RealGunWeapon("RealGun"));
+	weapons.push_back(new Bazuka("Bazuka"));
 
 	RingClass<Weapon*> boonk = InitializeRing(weapons);
 	

@@ -28,10 +28,10 @@ public:
 	}
 
 	RingClass(const RingClass& r)
+		:currentNode(nullptr)
+		,tailNode(nullptr)
 	{
 		Node* p = r.tailNode;
-		currentNode = nullptr;
-		tailNode = nullptr;
 		do
 		{
 			AddNode(p->value);
@@ -39,6 +39,15 @@ public:
 		}
 		while (p != r.tailNode);
 	}
+
+	RingClass(RingClass&& r)
+		:currentNode(r.currentNode)
+		,tailNode(r.tailNode)
+	{
+		r.currentNode = nullptr;
+		r.tailNode = nullptr;
+	}
+
 
 	~RingClass()
 	{
@@ -110,7 +119,6 @@ private:
 		} 
 		delete p;
 	}
-		
 
 private:
 	Node* currentNode;
