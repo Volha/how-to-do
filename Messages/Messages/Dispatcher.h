@@ -6,6 +6,10 @@
 class Dispatcher
 {
 public:
+	~Dispatcher()
+	{
+		
+	};
 	static Dispatcher* GetInstance()
 	{
 		if (m_instance == nullptr)
@@ -14,12 +18,14 @@ public:
 		}
 		return m_instance;
 	}
-	void SendMessage(MessageReceiver* sender, MessageReceiver* receiver, const std::string& message);
-	void AddMessageReceiver(MessageReceiver* rec);
-	void RemoveMessageReceiver();
+
+	void SendMessage(int sender, int receiver, const std::string& message);
+	void AddMessageReceiver(MessageReceiver::MessRecPtr rec);
+	void RemoveMessageReceiver(MessageReceiver::MessRecPtr rec);
+	
 private:
 	Dispatcher(){};
 	static Dispatcher* m_instance;
-	std::map<int, MessageReceiver*> subscribers;
+	std::map<int, MessageReceiver::MessRecPtr> subscribers;
 };
 
