@@ -1,8 +1,10 @@
 #pragma once
-#include "Packet.h"
+#include "PacketType.h"
+#include "Windows.h"
 
 class IPacketSink
 {
 public:
-	virtual void Consume(Packet()) = 0;
+	
+	virtual void Consume(PacketType* p) = 0;
 };

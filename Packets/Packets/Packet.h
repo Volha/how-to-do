@@ -1,6 +1,6 @@
 #pragma once
 
-//template<int N>
+template<int N>
 class Packet
 {
 public: 
@@ -9,12 +9,13 @@ public:
 	{
 	
 	}
-	/*int GetFullSize()
+
+	int GetFullSize()
 	{
 		return N;
-	};*/
+	};
 	
 	
-	char m_array[100];
+	char m_array[N];
 	int m_size;
 };
