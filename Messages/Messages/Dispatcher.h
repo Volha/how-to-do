@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 
+
 class Dispatcher
 {
 public:
@@ -10,15 +11,8 @@ public:
 	{
 		
 	};
-	static Dispatcher* GetInstance()
-	{
-		if (m_instance == nullptr)
-		{
-			m_instance = new Dispatcher;
-		}
-		return m_instance;
-	}
 
+	static Dispatcher* GetInstance();
 	void SendMessage(int sender, int receiver, const std::string& message);
 	void AddMessageReceiver(MessageReceiver::MessRecPtr rec);
 	void RemoveMessageReceiver(MessageReceiver::MessRecPtr rec);
