@@ -1,0 +1,998 @@
+17.07.12 08:43:20:809: --- Logging Started ---
+17.07.12 08:43:20:809: Cookie: c_user=100003256158867; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:809: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:20:809: Cookie: datr=CFEyT-JuIqMlDdagt_aNwQ_N; HttpOnly; expires=Sat, 12-Jul-2014 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:809: Date: бс 12. шўы 08:29:40 2014
+17.07.12 08:43:20:809: Cookie: fr=0RvEJUGsglpU1YR21.AWXpO2lyu9BDPuY0wkPYKn9sKbg; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:809: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:20:809: Cookie: lu=ThNmGbH7A0nxfQ7GbpddiU2w; HttpOnly; expires=Sat, 12-Jul-2014 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:809: Date: бс 12. шўы 08:29:40 2014
+17.07.12 08:43:20:809: Cookie: s=Aa5ZpDhl4cK0N4yp.BP_or0; secure; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:810: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:20:810: Cookie: xs=1%3Az_XKntxuq8l89g%3A0%3A1342081780; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:810: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:20:810: Cookie: locale=en_EN; expires=Tue, 24-Jul-2012 08:16:58 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:20:810: Date: Тђ 24. шўы 08:16:58 2012
+17.07.12 08:43:20:810: User ID set
+17.07.12 08:43:20:811: Got picture from storage for 100003256158867
+17.07.12 08:43:20:812: Got picture from storage for 100003256158867
+17.07.12 08:43:20:837: Before autoLogin()
+17.07.12 08:43:20:864: CMainWindow::on_pushButtonSignIn_clicked()
+17.07.12 08:43:20:865: Internet OK!
+17.07.12 08:43:20:865: m_serverCommunicator->communicate
+17.07.12 08:43:20:868: login request = <login_request><client_info><client_id>{52C45E18-594A-4FCA-A26C-521553B9A44D}</client_id><client_version>4.0.0.3765</client_version><language>en</language><referral>0</referral><origin>1</origin><brand>fTalk</brand><country>RussianFederation</country><test>0</test></client_info><user_info><user_id>100003256158867</user_id></user_info><system_info><os_version>6.1</os_version><browser_type>chrome.exe</browser_type><browser_version>20.0.1132.57</browser_version><platform>windows</platform></system_info></login_request>
+17.07.12 08:43:21:211: start server reconnect timer
+17.07.12 08:43:21:211: Sign in login: 100003256158867
+17.07.12 08:43:21:212: Authentication started.
+17.07.12 08:43:21:212: Getting JID by email started.
+17.07.12 08:43:21:212: FIMFacebookAPI::authorizeToFacebook started
+17.07.12 08:43:21:212: Start authentication by ID: https://www.facebook.com/dialog/oauth?client_id=285592984810370&redirect_uri=http://www.ftalk.com/client/login/login_success.html&display=popup&scope=xmpp_login,read_stream,publish_stream,friends_birthday,read_mailbox,user_photos,friends_photos,manage_friendlists,read_friendlists&response_type=token
+17.07.12 08:43:21:280: internet is ok
+17.07.12 08:43:21:414: Facebook action finished
+17.07.12 08:43:21:414: {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","link":"http:\/\/www.facebook.com\/lilly.born.7","username":"lilly.born.7","gender":"female","locale":"en_US"}
+17.07.12 08:43:22:557: FIMFacebookAPI::on_pageLoaded() loaded Url =http://www.ftalk.com/client/login/login_success.html#access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD&expires_in=0
+17.07.12 08:43:22:558: FIMFacebookAPI::on_AttachObject()
+17.07.12 08:43:22:997: js message ftalk is ok
+17.07.12 08:43:22:997: js message Result of expression 'document.getElementById('persist_box')' [null] is not an object.
+17.07.12 08:43:22:997: js message start
+17.07.12 08:43:22:997: js message http://www.ftalk.com/client/login/login_success.html#access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD&expires_in=0
+17.07.12 08:43:22:997: js message start parsing access token
+17.07.12 08:43:22:997: js message access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD
+17.07.12 08:43:22:998: HttpSend url = https://graph.facebook.com/me?access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD&fields=id,name,first_name,last_name,gender callback =OnUserFinished
+17.07.12 08:43:23:956: on_HttpSendFinished
+17.07.12 08:43:23:957: Incoming data = {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","gender":"female"}
+17.07.12 08:43:23:957: call js = OnUserFinished(true, {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","gender":"female"});
+17.07.12 08:43:23:957: FIMFacebookAPI::SetUserId ID = 100003256158867
+17.07.12 08:43:23:957: User ID set
+17.07.12 08:43:23:960: Got picture from storage for 100003256158867
+17.07.12 08:43:23:961: Got picture from storage for 100003256158867
+17.07.12 08:43:23:961: js message login-success
+17.07.12 08:43:23:962: js message like_check
+17.07.12 08:43:23:962: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=select+page_id+from+page_fan+where+uid=100003256158867+and+page_id=189685467708595&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnLikeFinished
+17.07.12 08:43:23:963: Destroying request for 100003256158867
+17.07.12 08:43:23:963: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:23:964: Destroying request for 100003256158867
+17.07.12 08:43:23:964: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:24:223: Facebook action finished
+17.07.12 08:43:24:223: {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","link":"http:\/\/www.facebook.com\/lilly.born.7","username":"lilly.born.7","gender":"female","locale":"en_US"}
+17.07.12 08:43:24:679: on_HttpSendFinished
+17.07.12 08:43:24:679: Incoming data = []
+17.07.12 08:43:24:679: call js = OnLikeFinished(true, []);
+17.07.12 08:43:24:680: js message OnLikeFinished - ok
+17.07.12 08:43:24:680: User Like = 0
+17.07.12 08:43:24:680: js message get_app_friends
+17.07.12 08:43:24:680: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+uid+FROM+user+WHERE+is_app_user=1+and+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=100003256158867)&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnFriendsFinished
+17.07.12 08:43:24:867: on_HttpSendFinished
+17.07.12 08:43:24:867: Incoming data = [{"uid":100000668769599},{"uid":100001634595253},{"uid":100001672726028},{"uid":100002954290207},{"uid":100003362080562}]
+17.07.12 08:43:24:867: call js = OnFriendsFinished(true, [{"uid":"100000668769599"},{"uid":"100001634595253"},{"uid":"100001672726028"},{"uid":"100002954290207"},{"uid":"100003362080562"}]);
+17.07.12 08:43:24:868: js message OnFriendsFinished - ok
+17.07.12 08:43:24:868: FIMFacebookAPI::AddAppFriend=100000668769599
+17.07.12 08:43:24:868: FIMFacebookAPI::AddAppFriend=100001634595253
+17.07.12 08:43:24:868: FIMFacebookAPI::AddAppFriend=100001672726028
+17.07.12 08:43:24:868: FIMFacebookAPI::AddAppFriend=100002954290207
+17.07.12 08:43:24:868: FIMFacebookAPI::AddAppFriend=100003362080562
+17.07.12 08:43:24:868: js message get_friends v4
+17.07.12 08:43:24:869: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+uid,+name,+first_name,+last_name,+pic_square,+birthday_date+FROM+user+WHERE+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=100003256158867)&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMyFriendsFinished
+17.07.12 08:43:25:058: on_HttpSendFinished
+17.07.12 08:43:25:059: Incoming data = [{"uid":1175742771,"name":"Kirill Koshkov","first_name":"Kirill","last_name":"Koshkov","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/48901_1175742771_9521_q.jpg","birthday_date":"03\/23\/1988"},{"uid":100000668769599,"name":"Rimma Martynenko","first_name":"Rimma","last_name":"Martynenko","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/203302_100000668769599_1007166_q.jpg","birthday_date":"10\/21\/1983"},{"uid":100001120676491,"name":"Petr Petrov","first_name":"Petr","last_name":"Petrov","pic_square":"http:\/\/profile.ak.fbcdn.net\/static-ak\/rsrc.php\/v2\/yo\/r\/UlIqmHJn-SK.gif","birthday_date":"01\/19\/1983"},{"uid":100001634595253,"name":"Stervochka Gadiukina","first_name":"Stervochka","last_name":"Gadiukina","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369601_100001634595253_613582620_q.jpg","birthday_date":"01\/20\/1981"},{"uid":100001672726028,"name":"Vika Jaka","first_name":"Vika","last_name":"Jaka","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/273677_100001672726028_2037584464_q.jpg","birthday_date":"09\/23\/1987"},{"uid":100001919771806,"name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441 \u0417\u0430\u043f\u0430\u0434","first_name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441","last_name":"\u0417\u0430\u043f\u0430\u0434","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/49938_100001919771806_4700332_q.jpg","birthday_date":null},{"uid":100002528644542,"name":"Belarustourist Belarus","first_name":"Belarustourist","last_name":"Belarus","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/211480_100002528644542_4426605_q.jpg","birthday_date":null},{"uid":100002954290207,"name":"Arti  Qaa","first_name":"Arti","last_name":"Qaa","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-ash2\/273639_100002954290207_892089430_q.jpg","birthday_date":"01\/15\/1989"},{"uid":100003362080562,"name":"Ruslana Pravdikova","first_name":"Ruslana","last_name":"Pravdikova","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369101_100003362080562_1111812503_q.jpg","birthday_date":"02\/08\/1983"},{"uid":100003576902339,"name":"\u041f\u043e\u043b\u0438\u043d\u0430 \u041c\u0430\u0443\u0437\u0435\u0440","first_name":"\u041f\u043e\u043b\u0438\u043d\u0430","last_name":"\u041c\u0430\u0443\u0437\u0435\u0440","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/173414_100003576902339_554457938_q.jpg","birthday_date":"04\/04\/1982"}]
+17.07.12 08:43:25:059: call js = OnMyFriendsFinished(true, [{"uid":"1175742771","name":"Kirill Koshkov","first_name":"Kirill","last_name":"Koshkov","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/48901_1175742771_9521_q.jpg","birthday_date":"03\/23\/1988"},{"uid":"100000668769599","name":"Rimma Martynenko","first_name":"Rimma","last_name":"Martynenko","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/203302_100000668769599_1007166_q.jpg","birthday_date":"10\/21\/1983"},{"uid":"100001120676491","name":"Petr Petrov","first_name":"Petr","last_name":"Petrov","pic_square":"http:\/\/profile.ak.fbcdn.net\/static-ak\/rsrc.php\/v2\/yo\/r\/UlIqmHJn-SK.gif","birthday_date":"01\/19\/1983"},{"uid":"100001634595253","name":"Stervochka Gadiukina","first_name":"Stervochka","last_name":"Gadiukina","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369601_100001634595253_613582620_q.jpg","birthday_date":"01\/20\/1981"},{"uid":"100001672726028","name":"Vika Jaka","first_name":"Vika","last_name":"Jaka","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/273677_100001672726028_2037584464_q.jpg","birthday_date":"09\/23\/1987"},{"uid":"100001919771806","name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441 \u0417\u0430\u043f\u0430\u0434","first_name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441","last_name":"\u0417\u0430\u043f\u0430\u0434","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/49938_100001919771806_4700332_q.jpg","birthday_date":null},{"uid":"100002528644542","name":"Belarustourist Belarus","first_name":"Belarustourist","last_name":"Belarus","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/211480_100002528644542_4426605_q.jpg","birthday_date":null},{"uid":"100002954290207","name":"Arti  Qaa","first_name":"Arti","last_name":"Qaa","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-ash2\/273639_100002954290207_892089430_q.jpg","birthday_date":"01\/15\/1989"},{"uid":"100003362080562","name":"Ruslana Pravdikova","first_name":"Ruslana","last_name":"Pravdikova","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369101_100003362080562_1111812503_q.jpg","birthday_date":"02\/08\/1983"},{"uid":"100003576902339","name":"\u041f\u043e\u043b\u0438\u043d\u0430 \u041c\u0430\u0443\u0437\u0435\u0440","first_name":"\u041f\u043e\u043b\u0438\u043d\u0430","last_name":"\u041c\u0430\u0443\u0437\u0435\u0440","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/173414_100003576902339_554457938_q.jpg","birthday_date":"04\/04\/1982"}]);
+17.07.12 08:43:25:060: js message OnMyFriendsFinished - ok
+17.07.12 08:43:25:061: Got picture from storage for 1175742771
+17.07.12 08:43:25:062: Got picture from storage for 100000668769599
+17.07.12 08:43:25:063: Got picture from storage for 100001120676491
+17.07.12 08:43:25:065: Got picture from storage for 100001634595253
+17.07.12 08:43:25:066: Got picture from storage for 100001672726028
+17.07.12 08:43:25:067: Got picture from storage for 100001919771806
+17.07.12 08:43:25:068: Got picture from storage for 100002528644542
+17.07.12 08:43:25:069: Got picture from storage for 100002954290207
+17.07.12 08:43:25:071: Got picture from storage for 100003362080562
+17.07.12 08:43:25:072: Got picture from storage for 100003576902339
+17.07.12 08:43:25:072: js message get_friendlist
+17.07.12 08:43:25:072: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+flid+FROM+friendlist+WHERE+owner=me()+and+type='close_friends'&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnFriendlistFinished
+17.07.12 08:43:25:075: Destroying request for 1175742771
+17.07.12 08:43:25:076: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:076: Destroying request for 100000668769599
+17.07.12 08:43:25:076: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:076: Destroying request for 100001120676491
+17.07.12 08:43:25:076: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:076: Destroying request for 100001634595253
+17.07.12 08:43:25:076: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:076: Destroying request for 100001672726028
+17.07.12 08:43:25:076: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:076: Destroying request for 100001919771806
+17.07.12 08:43:25:076: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:076: Destroying request for 100002528644542
+17.07.12 08:43:25:077: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:077: Destroying request for 100002954290207
+17.07.12 08:43:25:077: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:077: Destroying request for 100003362080562
+17.07.12 08:43:25:077: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:077: Destroying request for 100003576902339
+17.07.12 08:43:25:077: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:25:272: on_HttpSendFinished
+17.07.12 08:43:25:272: Incoming data = [{"flid":"111441708974367"}]
+17.07.12 08:43:25:272: call js = OnFriendlistFinished(true, [{"flid":"111441708974367"}]);
+17.07.12 08:43:25:272: js message OnFriendlistFinished - ok
+17.07.12 08:43:25:272: js message get_close_friends
+17.07.12 08:43:25:273: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+uid+FROM+friendlist_member+WHERE+flid=111441708974367&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnCloseFriendsFinished
+17.07.12 08:43:25:452: on_HttpSendFinished
+17.07.12 08:43:25:452: Incoming data = []
+17.07.12 08:43:25:452: call js = OnCloseFriendsFinished(true, []);
+17.07.12 08:43:25:453: js message OnCloseFriendsFinished - ok
+17.07.12 08:43:25:453: FIMConnectionManagerIRIS::OnSigningInSucceeded - Getting JID by email succeeded.
+17.07.12 08:43:25:453: Saving cookies
+17.07.12 08:43:25:456: Cookie: c_user=100003256158867; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:457: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:25:457: Cookie: datr=CFEyT-JuIqMlDdagt_aNwQ_N; HttpOnly; expires=Sat, 12-Jul-2014 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:457: Date: бс 12. шўы 08:29:40 2014
+17.07.12 08:43:25:457: Cookie: fr=0RvEJUGsglpU1YR21.AWXpO2lyu9BDPuY0wkPYKn9sKbg; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:457: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:25:457: Cookie: lu=ThNmGbH7A0nxfQ7GbpddiU2w; HttpOnly; expires=Sat, 12-Jul-2014 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:457: Date: бс 12. шўы 08:29:40 2014
+17.07.12 08:43:25:457: Cookie: s=Aa5ZpDhl4cK0N4yp.BP_or0; secure; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:457: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:25:457: Cookie: xs=1%3Az_XKntxuq8l89g%3A0%3A1342081780; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:458: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:43:25:458: Cookie: locale=en_EN; expires=Tue, 24-Jul-2012 08:43:24 GMT; domain=.facebook.com; path=/
+17.07.12 08:43:25:458: Date: Тђ 24. шўы 08:43:24 2012
+17.07.12 08:43:25:459: CMainWindow::on_signedIn like pressed = 0
+17.07.12 08:43:25:459: CMainWindow::ShowLikeButton()
+17.07.12 08:43:25:461: Like Url = http://extensions.ftalking.com/client/like/index.php
+17.07.12 08:43:25:472: Connecting to XMPP server started.
+17.07.12 08:43:26:673: FIMConnectionManagerIRIS::OnOutgoingXml: <?xml version="1.0"?>
+
+---
+
+17.07.12 08:43:26:673: FIMConnectionManagerIRIS::OnOutgoingXml: <stream:stream xmlns:stream="http://etherx.jabber.org/streams" version="1.0" xmlns="jabber:client" to="chat.facebook.com">
+
+---
+
+17.07.12 08:43:26:891: FIMConnectionManagerIRIS::OnIncomingXml: <?xml version="1.0"?><stream:stream id="A41BEBF0" from="chat.facebook.com" version="1.0" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" xml:lang="en">
+
+---
+
+17.07.12 08:43:26:891: mainElement.nodeName()=stream:stream
+17.07.12 08:43:26:892: FIMConnectionManagerIRIS::OnIncomingXml: <stream:features>
+<starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls"/>
+<mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl">
+<mechanism>X-FACEBOOK-PLATFORM</mechanism>
+<mechanism>DIGEST-MD5</mechanism>
+</mechanisms>
+</stream:features>
+
+---
+
+17.07.12 08:43:26:892: mainElement.nodeName()=stream:features
+17.07.12 08:43:26:892: FIMConnectionManagerIRIS::OnOutgoingXml: <starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls"/>
+
+---
+
+17.07.12 08:43:27:111: FIMConnectionManagerIRIS::OnIncomingXml: <proceed xmlns="urn:ietf:params:xml:ns:xmpp-tls"/>
+
+---
+
+17.07.12 08:43:27:111: mainElement.nodeName()=proceed
+17.07.12 08:43:27:555: FIMConnectionManagerIRIS::tls_handshaken()
+17.07.12 08:43:27:555: connection is closed
+17.07.12 08:43:27:556: FIMConnectionManagerIRIS::OnOutgoingXml: <?xml version="1.0"?>
+
+---
+
+17.07.12 08:43:27:556: FIMConnectionManagerIRIS::OnOutgoingXml: <stream:stream xmlns:stream="http://etherx.jabber.org/streams" version="1.0" xmlns="jabber:client" to="chat.facebook.com">
+
+---
+
+17.07.12 08:43:27:774: FIMConnectionManagerIRIS::OnIncomingXml: <?xml version="1.0"?><stream:stream id="A5199AB2" from="chat.facebook.com" version="1.0" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" xml:lang="en">
+
+---
+
+17.07.12 08:43:27:774: mainElement.nodeName()=stream:stream
+17.07.12 08:43:27:775: FIMConnectionManagerIRIS::OnIncomingXml: <stream:features>
+<mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl">
+<mechanism>X-FACEBOOK-PLATFORM</mechanism>
+<mechanism>DIGEST-MD5</mechanism>
+</mechanisms>
+</stream:features>
+
+---
+
+17.07.12 08:43:27:775: mainElement.nodeName()=stream:features
+17.07.12 08:43:27:776: FIMConnectionManagerIRIS::OnOutgoingXml: <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="X-FACEBOOK-PLATFORM"/>
+
+---
+
+17.07.12 08:43:27:996: FIMConnectionManagerIRIS::OnIncomingXml: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dmVyc2lvbj0xJm1ldGhvZD1hdXRoLnhtcHBfbG9naW4mbm9uY2U9OTkwQTJFNkZGMzIyMTY2QTY5MzJEOTg4QzEyNDQ2OUU=</challenge>
+
+---
+
+17.07.12 08:43:27:996: mainElement.nodeName()=challenge
+17.07.12 08:43:27:997: FIMConnectionManagerIRIS::OnOutgoingXml: <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">YXBpX2tleT0yODU1OTI5ODQ4MTAzNzAmY2FsbF9pZD0xMzQyNTE0NjA3Jm1ldGhvZD1hdXRoLnhtcHBfbG9naW4mbm9uY2U9OTkwQTJFNkZGMzIyMTY2QTY5MzJEOTg4QzEyNDQ2OUUmYWNjZXNzX3Rva2VuPUFBQUVEdnN4bzg0SUJBSEVVNHlwWkF1VTc0bVZNYTMxQnhXWkF1M2FLam84ZEZ4TUNuODdFWVpCUnNqbGx6WkM5MW5IQWptQWI3Y3ZuVWR3allTd3VCWU13YnNvWkJaQ1Z2WkFkcmk1aUlUNDJ3WkRaRCZ2PTEuMA==</response>
+
+---
+
+17.07.12 08:43:28:279: FIMConnectionManagerIRIS::OnIncomingXml: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl"/>
+
+---
+
+17.07.12 08:43:28:279: mainElement.nodeName()=success
+17.07.12 08:43:28:279: FIMConnectionManagerIRIS::OnOutgoingXml: <?xml version="1.0"?>
+
+---
+
+17.07.12 08:43:28:279: FIMConnectionManagerIRIS::OnOutgoingXml: <stream:stream xmlns:stream="http://etherx.jabber.org/streams" version="1.0" xmlns="jabber:client" to="chat.facebook.com">
+
+---
+
+17.07.12 08:43:28:508: FIMConnectionManagerIRIS::OnIncomingXml: <?xml version="1.0"?><stream:stream id="4C11910A" from="chat.facebook.com" version="1.0" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" xml:lang="en">
+
+---
+
+17.07.12 08:43:28:508: mainElement.nodeName()=stream:stream
+17.07.12 08:43:28:508: FIMConnectionManagerIRIS::OnIncomingXml: <stream:features>
+<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"/>
+<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>
+</stream:features>
+
+---
+
+17.07.12 08:43:28:509: mainElement.nodeName()=stream:features
+17.07.12 08:43:28:509: FIMConnectionManagerIRIS::OnOutgoingXml: <iq type="set" id="bind_1">
+<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"/>
+</iq>
+
+---
+
+17.07.12 08:43:28:728: FIMConnectionManagerIRIS::OnIncomingXml: <iq xmlns="jabber:client" type="result" id="bind_1">
+<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
+<jid>-100003256158867@chat.facebook.com/802a02b1_4C5028A82E20A</jid>
+</bind>
+</iq>
+
+---
+
+17.07.12 08:43:28:728: mainElement.nodeName()=iq
+17.07.12 08:43:28:728: FIMConnectionManagerIRIS::OnStreamAuthenticated
+17.07.12 08:43:28:728: FIMConnectionManagerIRIS::OnOutgoingXml: <iq type="set" id="aab1a">
+<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>
+</iq>
+
+---
+
+17.07.12 08:43:28:728: Authentication successfull
+17.07.12 08:43:29:185: FIMConnectionManagerIRIS::OnIncomingXml: <iq type="result" id="aab1a">
+<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>
+</iq>
+
+---
+
+17.07.12 08:43:29:185: mainElement.nodeName()=iq
+17.07.12 08:43:29:186: FIMConnectionManagerIRIS::OnSessionStartFinished
+17.07.12 08:43:29:186: FIMConnectionManagerIRIS::SessionStarted
+17.07.12 08:43:29:188: InboxManager::loaded Url =
+17.07.12 08:43:29:216: Got picture from storage for 100003256158867
+17.07.12 08:43:29:216: next Invite Date is зђ шўы 19 2012
+17.07.12 08:43:29:219: FIMConnectionManagerIRIS::OnOutgoingXml: <presence>
+<priority>0</priority>
+</presence>
+
+---
+
+17.07.12 08:43:29:219: FIMConnectionManagerIRIS::IsConnectedToServer()
+17.07.12 08:43:29:220: FIMFacebookAPI::updatePhotos started
+17.07.12 08:43:29:273: Destroying request for 100003256158867
+17.07.12 08:43:29:273: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:29:488: FIMConnectionManagerIRIS::OnIncomingXml: <presence from="-100001919771806@chat.facebook.com" to="-100003256158867@chat.facebook.com/802a02b1_4C5028A82E20A">
+<x xmlns="vcard-temp:x:update">
+<photo>83a0b62a190a4d36a101bbf7f5e8b844af683123</photo>
+</x>
+</presence>
+
+---
+
+17.07.12 08:43:29:488: mainElement.nodeName()=presence
+17.07.12 08:43:29:488: parsing presence
+17.07.12 08:43:29:488: m_uNumOnlineContacts was incremented: 1
+17.07.12 08:43:29:488: FIMConnectionManagerIRIS::OnIncomingXml: <presence from="-100003362080562@chat.facebook.com" to="-100003256158867@chat.facebook.com/802a02b1_4C5028A82E20A">
+<x xmlns="vcard-temp:x:update">
+<photo>b1dba43f1666599125ef69b3b7a7170b846e4448</photo>
+</x>
+</presence>
+
+---
+
+17.07.12 08:43:29:488: mainElement.nodeName()=presence
+17.07.12 08:43:29:488: parsing presence
+17.07.12 08:43:29:488: m_uNumOnlineContacts was incremented: 2
+17.07.12 08:43:29:607: InboxManager::on_AttachObject()
+17.07.12 08:43:29:608: InboxManager log=get_inbox
+17.07.12 08:43:29:608: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+thread_id,+recipients+FROM+thread+WHERE+folder_id=0+and+unread!=0+and+viewer_id=me()+AND+updated_time+>+1342446755&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnInboxFinished
+17.07.12 08:43:29:641: WorkWebViewBase -- Load finished
+17.07.12 08:43:29:641: InboxManager::Url =http://extensions.ftalkconnect.com/client/inbox/inbox-v4.html
+17.07.12 08:43:29:647: FIMFacebookAPI::on_AttachObject()
+17.07.12 08:43:29:647: js message ftalk is ok
+17.07.12 08:43:29:647: js message start
+17.07.12 08:43:29:648: js message access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD
+17.07.12 08:43:29:648: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+owner,+modified_major+FROM+album+WHERE+type='profile'+AND+((owner+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=me()))+OR+(owner=me()))&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnPhotosFinished
+17.07.12 08:43:30:277: on_HttpSendFinished
+17.07.12 08:43:30:277: Incoming data = []
+17.07.12 08:43:30:277: call js = OnInboxFinished(true, []);
+17.07.12 08:43:30:278: InboxManager log=OnInboxFinished - ok
+17.07.12 08:43:30:278: InboxManager log=get_messages
+17.07.12 08:43:30:278: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM message+WHERE+thread_id+IN+()+AND+created_time+>+1342446755&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:30:454: on_HttpSendFinished
+17.07.12 08:43:30:454: Incoming data = []
+17.07.12 08:43:30:454: call js = OnMessageFinished(true, []);
+17.07.12 08:43:30:454: InboxManager log=OnMessageFinished - ok
+17.07.12 08:43:35:629: on_HttpSendFinished
+17.07.12 08:43:35:629: Incoming data = [{"owner":1175742771,"modified_major":1254917475},{"owner":100000668769599,"modified_major":1312463792},{"owner":100001634595253,"modified_major":1326887053},{"owner":100001672726028,"modified_major":1341995268},{"owner":100001919771806,"modified_major":1290090077},{"owner":100002528644542,"modified_major":1307425031},{"owner":100002954290207,"modified_major":1316769229},{"owner":100003362080562,"modified_major":1326892582},{"owner":100003576902339,"modified_major":1328184387}]
+17.07.12 08:43:35:630: call js = OnPhotosFinished(true, [{"owner":"1175742771","modified_major":"1254917475"},{"owner":"100000668769599","modified_major":"1312463792"},{"owner":"100001634595253","modified_major":"1326887053"},{"owner":"100001672726028","modified_major":"1341995268"},{"owner":"100001919771806","modified_major":"1290090077"},{"owner":"100002528644542","modified_major":"1307425031"},{"owner":"100002954290207","modified_major":"1316769229"},{"owner":"100003362080562","modified_major":"1326892582"},{"owner":"100003576902339","modified_major":"1328184387"}]);
+17.07.12 08:43:35:630: js message OnPhotosFinished - ok
+17.07.12 08:43:35:630: SetPhotoStamp(1175742771, 1254917475)
+17.07.12 08:43:35:632: Got picture from storage for 1175742771
+17.07.12 08:43:35:632: SetPhotoStamp(100000668769599, 1312463792)
+17.07.12 08:43:35:633: Got picture from storage for 100000668769599
+17.07.12 08:43:35:633: SetPhotoStamp(100001634595253, 1326887053)
+17.07.12 08:43:35:634: Got picture from storage for 100001634595253
+17.07.12 08:43:35:635: SetPhotoStamp(100001672726028, 1341995268)
+17.07.12 08:43:35:636: Got picture from storage for 100001672726028
+17.07.12 08:43:35:636: SetPhotoStamp(100001919771806, 1290090077)
+17.07.12 08:43:35:637: Got picture from storage for 100001919771806
+17.07.12 08:43:35:637: SetPhotoStamp(100002528644542, 1307425031)
+17.07.12 08:43:35:638: Got picture from storage for 100002528644542
+17.07.12 08:43:35:638: SetPhotoStamp(100002954290207, 1316769229)
+17.07.12 08:43:35:639: Got picture from storage for 100002954290207
+17.07.12 08:43:35:640: SetPhotoStamp(100003362080562, 1326892582)
+17.07.12 08:43:35:641: Got picture from storage for 100003362080562
+17.07.12 08:43:35:641: SetPhotoStamp(100003576902339, 1328184387)
+17.07.12 08:43:35:642: Got picture from storage for 100003576902339
+17.07.12 08:43:35:642: js message Update is finished
+17.07.12 08:43:35:644: Destroying request for 1175742771
+17.07.12 08:43:35:644: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:644: Destroying request for 100000668769599
+17.07.12 08:43:35:644: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:644: Destroying request for 100001634595253
+17.07.12 08:43:35:644: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:644: Destroying request for 100001672726028
+17.07.12 08:43:35:645: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:645: Destroying request for 100001919771806
+17.07.12 08:43:35:645: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:645: Destroying request for 100002528644542
+17.07.12 08:43:35:645: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:645: Destroying request for 100002954290207
+17.07.12 08:43:35:645: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:645: Destroying request for 100003362080562
+17.07.12 08:43:35:645: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:35:645: Destroying request for 100003576902339
+17.07.12 08:43:35:645: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:40:979: Open user chat for user 100003362080562
+17.07.12 08:43:41:023: Got picture from storage for 100003362080562
+17.07.12 08:43:41:024: Got picture from storage for 100003256158867
+17.07.12 08:43:41:024: ConversationWidget::on_showPrevMsg() update from server
+17.07.12 08:43:41:026: InboxManager::loaded Url =
+17.07.12 08:43:41:080: ChatHistoryView::on_finishLoading
+17.07.12 08:43:41:081: PersonalChatHistory::enumerateHistory - items: 0
+17.07.12 08:43:41:082: Destroying request for 100003362080562
+17.07.12 08:43:41:082: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:41:082: Destroying request for 100003256158867
+17.07.12 08:43:41:082: PictureDownloader::on_pictureLoaded
+17.07.12 08:43:41:447: InboxManager::on_AttachObject()
+17.07.12 08:43:41:448: InboxManager log=archiveMSG get_history
+17.07.12 08:43:41:448: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+thread_id,+recipients+FROM+thread+WHERE+folder_id=0+and+viewer_id=me()+AND+100003362080562+IN+(recipients)&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnHistoryFinished
+17.07.12 08:43:41:450: WorkWebViewBase -- Load finished
+17.07.12 08:43:41:450: InboxManager::Url =http://extensions.ftalkconnect.com/client/inbox/archive.html
+17.07.12 08:43:42:207: on_HttpSendFinished
+17.07.12 08:43:42:208: Incoming data = [{"thread_id":"374917199191644","recipients":[100003256158867,100003362080562]}]
+17.07.12 08:43:42:208: call js = OnHistoryFinished(true, [{"thread_id":"374917199191644","recipients":[100003256158867,100003362080562]}]);
+17.07.12 08:43:42:208: InboxManager log=archiveMSG OnHistoryFinished - ok
+17.07.12 08:43:42:208: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:42:208: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:42:480: on_HttpSendFinished
+17.07.12 08:43:42:481: Incoming data = [{"message_id":"374917199191644_540","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342426264,"body":"Video chat has ended."},{"message_id":"374917199191644_539","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342426209,"body":"You were invited to a video chat."},{"message_id":"374917199191644_538","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342426082,"body":"lkmknkjlghlv"},{"message_id":"374917199191644_537","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342167584,"body":"Video chat has ended."},{"message_id":"374917199191644_536","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342167552,"body":"You were invited to a video chat."},{"message_id":"374917199191644_535","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342167376,"body":"Video chat has ended."},{"message_id":"374917199191644_534","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342167363,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_533","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342167355,"body":"You were invited to a video chat."},{"message_id":"374917199191644_532","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166924,"body":"Video chat has ended."},{"message_id":"374917199191644_531","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166870,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_530","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342166866,"body":"You were invited to a video chat."},{"message_id":"374917199191644_529","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342166854,"body":"Video chat was declined."},{"message_id":"374917199191644_528","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166846,"body":"You were invited to a video chat."},{"message_id":"374917199191644_527","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166825,"body":"Video chat was declined."},{"message_id":"374917199191644_526","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166820,"body":"You were invited to a video chat."}]
+17.07.12 08:43:42:481: call js = OnMessageFinished(true, [{"message_id":"374917199191644_540","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342426264","body":"Video chat has ended."},{"message_id":"374917199191644_539","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342426209","body":"You were invited to a video chat."},{"message_id":"374917199191644_538","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342426082","body":"lkmknkjlghlv"},{"message_id":"374917199191644_537","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342167584","body":"Video chat has ended."},{"message_id":"374917199191644_536","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342167552","body":"You were invited to a video chat."},{"message_id":"374917199191644_535","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342167376","body":"Video chat has ended."},{"message_id":"374917199191644_534","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342167363","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_533","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342167355","body":"You were invited to a video chat."},{"message_id":"374917199191644_532","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166924","body":"Video chat has ended."},{"message_id":"374917199191644_531","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166870","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_530","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342166866","body":"You were invited to a video chat."},{"message_id":"374917199191644_529","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342166854","body":"Video chat was declined."},{"message_id":"374917199191644_528","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166846","body":"You were invited to a video chat."},{"message_id":"374917199191644_527","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166825","body":"Video chat was declined."},{"message_id":"374917199191644_526","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166820","body":"You were invited to a video chat."}]);
+17.07.12 08:43:42:482: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:42:499: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(1) less then need(15)
+17.07.12 08:43:42:500: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:42:500: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1342166820+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:42:552: VideoWidget: Connect to server
+17.07.12 08:43:42:634: VideoWidget: Connect to server core
+17.07.12 08:43:42:634: Video URL: http://service.ftalk.com/video/cc.php?myID=100003256158867&friendID=100003362080562
+17.07.12 08:43:42:739: on_HttpSendFinished
+17.07.12 08:43:42:739: Incoming data = [{"message_id":"374917199191644_525","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342166791,"body":"Video chat has ended."},{"message_id":"374917199191644_524","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166787,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_523","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342166783,"body":"You were invited to a video chat."},{"message_id":"374917199191644_522","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166776,"body":"Video chat has ended."},{"message_id":"374917199191644_521","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166743,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_520","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342166741,"body":"You were invited to a video chat."},{"message_id":"374917199191644_519","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342166735,"body":"Video chat was declined."},{"message_id":"374917199191644_518","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166699,"body":"You were invited to a video chat."},{"message_id":"374917199191644_517","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166698,"body":"Video chat has ended."},{"message_id":"374917199191644_516","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342166639,"body":"You were invited to a video chat."},{"message_id":"374917199191644_515","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082358,"body":"Video chat has ended."},{"message_id":"374917199191644_514","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082339,"body":"You were invited to a video chat."},{"message_id":"374917199191644_513","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082331,"body":"Video chat has ended."},{"message_id":"374917199191644_512","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082326,"body":"You were invited to a video chat."},{"message_id":"374917199191644_511","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082323,"body":"Video chat has ended."}]
+17.07.12 08:43:42:739: call js = OnMessageFinished(true, [{"message_id":"374917199191644_525","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342166791","body":"Video chat has ended."},{"message_id":"374917199191644_524","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166787","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_523","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342166783","body":"You were invited to a video chat."},{"message_id":"374917199191644_522","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166776","body":"Video chat has ended."},{"message_id":"374917199191644_521","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166743","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_520","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342166741","body":"You were invited to a video chat."},{"message_id":"374917199191644_519","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342166735","body":"Video chat was declined."},{"message_id":"374917199191644_518","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166699","body":"You were invited to a video chat."},{"message_id":"374917199191644_517","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166698","body":"Video chat has ended."},{"message_id":"374917199191644_516","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342166639","body":"You were invited to a video chat."},{"message_id":"374917199191644_515","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082358","body":"Video chat has ended."},{"message_id":"374917199191644_514","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082339","body":"You were invited to a video chat."},{"message_id":"374917199191644_513","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082331","body":"Video chat has ended."},{"message_id":"374917199191644_512","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082326","body":"You were invited to a video chat."},{"message_id":"374917199191644_511","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082323","body":"Video chat has ended."}]);
+17.07.12 08:43:42:740: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:42:754: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(1) less then need(15)
+17.07.12 08:43:42:754: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:42:754: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1342082323+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:42:969: on_HttpSendFinished
+17.07.12 08:43:42:969: Incoming data = [{"message_id":"374917199191644_510","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082283,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_509","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082281,"body":"You were invited to a video chat."},{"message_id":"374917199191644_508","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082277,"body":"Video chat has ended."},{"message_id":"374917199191644_507","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082257,"body":"\u0430\u0432\u0430\u044b"},{"message_id":"374917199191644_506","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082240,"body":"\u0436\u0434\u043b\u0436\u0434\u043b"},{"message_id":"374917199191644_505","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082237,"body":"\u0432\u043b\u0430\u043e\u0434\u0430\u043e\u043b"},{"message_id":"374917199191644_504","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082236,"body":"\u043e\u0430\u043b\u0434\u044b\u0432\u043b\u0430\u043e"},{"message_id":"374917199191644_503","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082229,"body":"\u043d\u0430\u043f\u0438\u0448\u0443\u044a"},{"message_id":"374917199191644_502","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082206,"body":"\u043d\u0443 \u0432\u043e\u0442 \u0432\u0438\u0434\u0438\u0448\u044c \u043d\u0430\u043f\u0438\u0441\u0430\u043b\u0430 \u0443\u0436\u0435"},{"message_id":"374917199191644_501","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082197,"body":"25 \u0438\u044e\u043d\u044f \u0430\u0436"},{"message_id":"374917199191644_500","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342082190,"body":"\u042f \u0442\u0435\u0431\u0435 \u0434\u0430\u0432\u043d\u043e \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u043f\u0438\u0441\u0430\u043b\u0430"},{"message_id":"374917199191644_499","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342082166,"body":"You were invited to a video chat."},{"message_id":"374917199191644_498","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992355,"body":"Video chat has ended."},{"message_id":"374917199191644_497","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992314,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_496","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341992311,"body":"You were invited to a video chat."}]
+17.07.12 08:43:42:969: call js = OnMessageFinished(true, [{"message_id":"374917199191644_510","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082283","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_509","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082281","body":"You were invited to a video chat."},{"message_id":"374917199191644_508","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082277","body":"Video chat has ended."},{"message_id":"374917199191644_507","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082257","body":"\u0430\u0432\u0430\u044b"},{"message_id":"374917199191644_506","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082240","body":"\u0436\u0434\u043b\u0436\u0434\u043b"},{"message_id":"374917199191644_505","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082237","body":"\u0432\u043b\u0430\u043e\u0434\u0430\u043e\u043b"},{"message_id":"374917199191644_504","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082236","body":"\u043e\u0430\u043b\u0434\u044b\u0432\u043b\u0430\u043e"},{"message_id":"374917199191644_503","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082229","body":"\u043d\u0430\u043f\u0438\u0448\u0443\u044a"},{"message_id":"374917199191644_502","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082206","body":"\u043d\u0443 \u0432\u043e\u0442 \u0432\u0438\u0434\u0438\u0448\u044c \u043d\u0430\u043f\u0438\u0441\u0430\u043b\u0430 \u0443\u0436\u0435"},{"message_id":"374917199191644_501","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082197","body":"25 \u0438\u044e\u043d\u044f \u0430\u0436"},{"message_id":"374917199191644_500","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342082190","body":"\u042f \u0442\u0435\u0431\u0435 \u0434\u0430\u0432\u043d\u043e \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u043f\u0438\u0441\u0430\u043b\u0430"},{"message_id":"374917199191644_499","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342082166","body":"You were invited to a video chat."},{"message_id":"374917199191644_498","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992355","body":"Video chat has ended."},{"message_id":"374917199191644_497","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992314","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_496","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341992311","body":"You were invited to a video chat."}]);
+17.07.12 08:43:42:970: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:42:995: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(9) less then need(15)
+17.07.12 08:43:42:995: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:42:996: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1341992311+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:43:319: on_HttpSendFinished
+17.07.12 08:43:43:319: Incoming data = [{"message_id":"374917199191644_495","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992298,"body":"Video chat has ended."},{"message_id":"374917199191644_494","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992257,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_493","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341992254,"body":"You were invited to a video chat."},{"message_id":"374917199191644_492","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341992210,"body":"Video chat has ended."},{"message_id":"374917199191644_491","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341992159,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_490","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992146,"body":"You were invited to a video chat."},{"message_id":"374917199191644_489","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992126,"body":"Video chat has ended."},{"message_id":"374917199191644_488","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341992085,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_487","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341992083,"body":"You were invited to a video chat."},{"message_id":"374917199191644_486","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341824474,"body":"Video chat has ended."},{"message_id":"374917199191644_485","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341824473,"body":"Video chat has ended."},{"message_id":"374917199191644_484","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341824462,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_483","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341824456,"body":"You were invited to a video chat."},{"message_id":"374917199191644_482","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341562522,"body":"Video chat has ended."},{"message_id":"374917199191644_481","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341562487,"body":"Video chat has started. Hurray!"}]
+17.07.12 08:43:43:319: call js = OnMessageFinished(true, [{"message_id":"374917199191644_495","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992298","body":"Video chat has ended."},{"message_id":"374917199191644_494","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992257","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_493","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341992254","body":"You were invited to a video chat."},{"message_id":"374917199191644_492","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341992210","body":"Video chat has ended."},{"message_id":"374917199191644_491","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341992159","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_490","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992146","body":"You were invited to a video chat."},{"message_id":"374917199191644_489","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992126","body":"Video chat has ended."},{"message_id":"374917199191644_488","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341992085","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_487","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341992083","body":"You were invited to a video chat."},{"message_id":"374917199191644_486","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341824474","body":"Video chat has ended."},{"message_id":"374917199191644_485","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341824473","body":"Video chat has ended."},{"message_id":"374917199191644_484","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341824462","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_483","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341824456","body":"You were invited to a video chat."},{"message_id":"374917199191644_482","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341562522","body":"Video chat has ended."},{"message_id":"374917199191644_481","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341562487","body":"Video chat has started. Hurray!"}]);
+17.07.12 08:43:43:320: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:43:335: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(9) less then need(15)
+17.07.12 08:43:43:335: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:43:335: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1341562487+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:43:573: on_HttpSendFinished
+17.07.12 08:43:43:573: Incoming data = [{"message_id":"374917199191644_480","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341562458,"body":"You were invited to a video chat."},{"message_id":"374917199191644_479","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341473390,"body":"Video chat has ended."},{"message_id":"374917199191644_478","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341473387,"body":"Video chat has ended."},{"message_id":"374917199191644_477","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341473323,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_476","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341473319,"body":"You were invited to a video chat."},{"message_id":"374917199191644_475","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341473299,"body":"Video chat was declined."},{"message_id":"374917199191644_474","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341473297,"body":"Video chat was declined."},{"message_id":"374917199191644_473","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341473282,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_472","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341473279,"body":"You were invited to a video chat."},{"message_id":"374917199191644_471","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341473270,"body":"Video chat was declined."},{"message_id":"374917199191644_470","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341473246,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_469","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341473243,"body":"You were invited to a video chat."},{"message_id":"374917199191644_468","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341390189,"body":"Video chat has ended."},{"message_id":"374917199191644_467","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341390149,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_466","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341390138,"body":"You were invited to a video chat."}]
+17.07.12 08:43:43:574: call js = OnMessageFinished(true, [{"message_id":"374917199191644_480","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341562458","body":"You were invited to a video chat."},{"message_id":"374917199191644_479","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341473390","body":"Video chat has ended."},{"message_id":"374917199191644_478","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341473387","body":"Video chat has ended."},{"message_id":"374917199191644_477","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341473323","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_476","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341473319","body":"You were invited to a video chat."},{"message_id":"374917199191644_475","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341473299","body":"Video chat was declined."},{"message_id":"374917199191644_474","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341473297","body":"Video chat was declined."},{"message_id":"374917199191644_473","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341473282","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_472","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341473279","body":"You were invited to a video chat."},{"message_id":"374917199191644_471","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341473270","body":"Video chat was declined."},{"message_id":"374917199191644_470","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341473246","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_469","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341473243","body":"You were invited to a video chat."},{"message_id":"374917199191644_468","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341390189","body":"Video chat has ended."},{"message_id":"374917199191644_467","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341390149","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_466","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341390138","body":"You were invited to a video chat."}]);
+17.07.12 08:43:43:574: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:43:591: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(9) less then need(15)
+17.07.12 08:43:43:591: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:43:591: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1341390138+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:44:066: VideoWidget: Begin main script
+17.07.12 08:43:44:713: on_HttpSendFinished
+17.07.12 08:43:44:713: Incoming data = [{"message_id":"374917199191644_465","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341390102,"body":"Video chat has ended."},{"message_id":"374917199191644_464","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341390084,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_463","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341390075,"body":"You were invited to a video chat."},{"message_id":"374917199191644_462","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341044672,"body":"Video chat has ended."},{"message_id":"374917199191644_461","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341044662,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_460","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341044652,"body":"You were invited to a video chat."},{"message_id":"374917199191644_459","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341042968,"body":"Video chat has ended."},{"message_id":"374917199191644_458","thread_id":"374917199191644","author_id":100003256158867,"created_time":1341042945,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_457","thread_id":"374917199191644","author_id":100003362080562,"created_time":1341042939,"body":"You were invited to a video chat."},{"message_id":"374917199191644_456","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340871372,"body":"Video chat has ended."},{"message_id":"374917199191644_455","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340871321,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_454","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340871318,"body":"You were invited to a video chat."},{"message_id":"374917199191644_453","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340784679,"body":"Video chat was declined."},{"message_id":"374917199191644_452","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340784678,"body":"Video chat has ended."},{"message_id":"374917199191644_451","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340784616,"body":"Video chat has started. Hurray!"}]
+17.07.12 08:43:44:713: call js = OnMessageFinished(true, [{"message_id":"374917199191644_465","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341390102","body":"Video chat has ended."},{"message_id":"374917199191644_464","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341390084","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_463","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341390075","body":"You were invited to a video chat."},{"message_id":"374917199191644_462","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341044672","body":"Video chat has ended."},{"message_id":"374917199191644_461","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341044662","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_460","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341044652","body":"You were invited to a video chat."},{"message_id":"374917199191644_459","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341042968","body":"Video chat has ended."},{"message_id":"374917199191644_458","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1341042945","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_457","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1341042939","body":"You were invited to a video chat."},{"message_id":"374917199191644_456","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340871372","body":"Video chat has ended."},{"message_id":"374917199191644_455","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340871321","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_454","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340871318","body":"You were invited to a video chat."},{"message_id":"374917199191644_453","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340784679","body":"Video chat was declined."},{"message_id":"374917199191644_452","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340784678","body":"Video chat has ended."},{"message_id":"374917199191644_451","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340784616","body":"Video chat has started. Hurray!"}]);
+17.07.12 08:43:44:714: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:44:728: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(9) less then need(15)
+17.07.12 08:43:44:728: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:44:728: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1340784616+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:44:947: on_HttpSendFinished
+17.07.12 08:43:44:947: Incoming data = [{"message_id":"374917199191644_450","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340784608,"body":"You were invited to a video chat."},{"message_id":"374917199191644_449","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340697440,"body":"Video chat was declined."},{"message_id":"374917199191644_448","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340697434,"body":"Video chat was declined."},{"message_id":"374917199191644_447","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340697433,"body":"Video chat has ended."},{"message_id":"374917199191644_446","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340697394,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_445","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340697391,"body":"You were invited to a video chat."},{"message_id":"374917199191644_444","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611696,"body":"Video chat was declined."},{"message_id":"374917199191644_443","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611694,"body":"(^^^)"},{"message_id":"374917199191644_442","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611691,"body":"Video chat was declined."},{"message_id":"374917199191644_441","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611689,"body":"Video chat has ended."},{"message_id":"374917199191644_440","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611688,"body":"\u003C(\")"},{"message_id":"374917199191644_439","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611655,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_438","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611651,"body":"You were invited to a video chat."},{"message_id":"374917199191644_437","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611619,"body":"Video chat was declined."},{"message_id":"374917199191644_436","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611618,"body":"You were invited to a video chat."}]
+17.07.12 08:43:44:947: call js = OnMessageFinished(true, [{"message_id":"374917199191644_450","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340784608","body":"You were invited to a video chat."},{"message_id":"374917199191644_449","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340697440","body":"Video chat was declined."},{"message_id":"374917199191644_448","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340697434","body":"Video chat was declined."},{"message_id":"374917199191644_447","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340697433","body":"Video chat has ended."},{"message_id":"374917199191644_446","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340697394","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_445","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340697391","body":"You were invited to a video chat."},{"message_id":"374917199191644_444","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611696","body":"Video chat was declined."},{"message_id":"374917199191644_443","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611694","body":"(^^^)"},{"message_id":"374917199191644_442","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611691","body":"Video chat was declined."},{"message_id":"374917199191644_441","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611689","body":"Video chat has ended."},{"message_id":"374917199191644_440","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611688","body":"\u003C(\")"},{"message_id":"374917199191644_439","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611655","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_438","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611651","body":"You were invited to a video chat."},{"message_id":"374917199191644_437","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611619","body":"Video chat was declined."},{"message_id":"374917199191644_436","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611618","body":"You were invited to a video chat."}]);
+17.07.12 08:43:44:948: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:44:970: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(11) less then need(15)
+17.07.12 08:43:44:971: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:44:971: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1340611618+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:45:071: VideoWidget: finishHTMLLoading
+17.07.12 08:43:45:071: VideoWidget: InitEnvironment
+17.07.12 08:43:45:072: VideoWidget: Init Device Manager
+17.07.12 08:43:45:100: on_enterVideoChat: 100003362080562
+17.07.12 08:43:45:100: pauseActiveVideochat - set active  100003362080562
+17.07.12 08:43:45:100: FIMConnectionManagerIRIS::SendSpecialMsg
+17.07.12 08:43:45:100: FIMConnectionManagerIRIS::SendMsg_XMPP started
+17.07.12 08:43:45:101: FIMConnectionManagerIRIS::OnOutgoingXml: <message to="-100003362080562@chat.facebook.com" id="aab3a">
+<body>You were invited to a video chat.</body>
+<request xmlns="urn:xmpp:receipts"/>
+</message>
+
+---
+
+17.07.12 08:43:45:101: FIMConnectionManagerIRIS::SendMsg_XMPP succeeded
+17.07.12 08:43:45:186: on_HttpSendFinished
+17.07.12 08:43:45:187: Incoming data = [{"message_id":"374917199191644_435","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611615,"body":"Video chat was declined."},{"message_id":"374917199191644_434","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611614,"body":"You were invited to a video chat."},{"message_id":"374917199191644_433","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611504,"body":"Video chat was declined."},{"message_id":"374917199191644_432","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611502,"body":"You were invited to a video chat."},{"message_id":"374917199191644_430","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611496,"body":"You were invited to a video chat."},{"message_id":"374917199191644_431","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611496,"body":"Video chat was declined."},{"message_id":"374917199191644_429","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611490,"body":"Video chat was declined."},{"message_id":"374917199191644_428","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611490,"body":"You were invited to a video chat."},{"message_id":"374917199191644_427","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611488,"body":"Video chat was declined."},{"message_id":"374917199191644_426","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340611487,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_425","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611483,"body":"You were invited to a video chat."},{"message_id":"374917199191644_423","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611360,"body":"Video chat has ended."},{"message_id":"374917199191644_424","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611360,"body":"Video chat was declined."},{"message_id":"374917199191644_422","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340611325,"body":"You were invited to a video chat."},{"message_id":"374917199191644_421","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340357381,"body":"htllo"}]
+17.07.12 08:43:45:187: call js = OnMessageFinished(true, [{"message_id":"374917199191644_435","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611615","body":"Video chat was declined."},{"message_id":"374917199191644_434","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611614","body":"You were invited to a video chat."},{"message_id":"374917199191644_433","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611504","body":"Video chat was declined."},{"message_id":"374917199191644_432","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611502","body":"You were invited to a video chat."},{"message_id":"374917199191644_430","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611496","body":"You were invited to a video chat."},{"message_id":"374917199191644_431","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611496","body":"Video chat was declined."},{"message_id":"374917199191644_429","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611490","body":"Video chat was declined."},{"message_id":"374917199191644_428","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611490","body":"You were invited to a video chat."},{"message_id":"374917199191644_427","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611488","body":"Video chat was declined."},{"message_id":"374917199191644_426","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340611487","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_425","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611483","body":"You were invited to a video chat."},{"message_id":"374917199191644_423","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611360","body":"Video chat has ended."},{"message_id":"374917199191644_424","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611360","body":"Video chat was declined."},{"message_id":"374917199191644_422","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340611325","body":"You were invited to a video chat."},{"message_id":"374917199191644_421","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340357381","body":"htllo"}]);
+17.07.12 08:43:45:188: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:45:209: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(12) less then need(15)
+17.07.12 08:43:45:210: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:45:210: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1340357381+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:45:614: on_HttpSendFinished
+17.07.12 08:43:45:614: Incoming data = [{"message_id":"374917199191644_420","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340357378,"body":"oo"},{"message_id":"374917199191644_419","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340355841,"body":"Video chat was declined."},{"message_id":"374917199191644_417","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340355840,"body":"Video chat was declined."},{"message_id":"374917199191644_418","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340355840,"body":"Video chat has ended."},{"message_id":"374917199191644_416","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340355838,"body":"Video chat has ended."},{"message_id":"374917199191644_415","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340355810,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_414","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340355799,"body":"You were invited to a video chat."},{"message_id":"374917199191644_413","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340268040,"body":"Video chat was declined."},{"message_id":"374917199191644_412","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340268038,"body":"Video chat has ended."},{"message_id":"374917199191644_411","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340267987,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_410","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340267980,"body":"You were invited to a video chat."},{"message_id":"374917199191644_409","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340179097,"body":"Video chat was declined."},{"message_id":"374917199191644_408","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340179096,"body":"Video chat has ended."},{"message_id":"374917199191644_407","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340179070,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_406","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340179039,"body":"You were invited to a video chat."}]
+17.07.12 08:43:45:615: call js = OnMessageFinished(true, [{"message_id":"374917199191644_420","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340357378","body":"oo"},{"message_id":"374917199191644_419","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340355841","body":"Video chat was declined."},{"message_id":"374917199191644_417","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340355840","body":"Video chat was declined."},{"message_id":"374917199191644_418","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340355840","body":"Video chat has ended."},{"message_id":"374917199191644_416","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340355838","body":"Video chat has ended."},{"message_id":"374917199191644_415","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340355810","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_414","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340355799","body":"You were invited to a video chat."},{"message_id":"374917199191644_413","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340268040","body":"Video chat was declined."},{"message_id":"374917199191644_412","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340268038","body":"Video chat has ended."},{"message_id":"374917199191644_411","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340267987","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_410","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340267980","body":"You were invited to a video chat."},{"message_id":"374917199191644_409","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340179097","body":"Video chat was declined."},{"message_id":"374917199191644_408","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340179096","body":"Video chat has ended."},{"message_id":"374917199191644_407","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340179070","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_406","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340179039","body":"You were invited to a video chat."}]);
+17.07.12 08:43:45:615: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:45:631: CWorkFlowManager::on_HistoryMessageReceived() flag = 3; but msg for synchronization(13) less then need(15)
+17.07.12 08:43:45:632: InboxManager log=archiveMSG get_messages
+17.07.12 08:43:45:632: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM+message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+<+1340179039+ORDER BY  created_time DESC LIMIT 0,15&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:43:46:148: VideoWidget: Devices detected: 0:1
+17.07.12 08:43:46:295: on_HttpSendFinished
+17.07.12 08:43:46:295: Incoming data = [{"message_id":"374917199191644_405","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340098246,"body":"Video chat was declined."},{"message_id":"374917199191644_404","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340098245,"body":"Video chat has ended."},{"message_id":"374917199191644_403","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340098210,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_402","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340098192,"body":"You were invited to a video chat."},{"message_id":"374917199191644_401","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094878,"body":"Video chat was declined."},{"message_id":"374917199191644_400","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340094872,"body":"Video chat was declined."},{"message_id":"374917199191644_399","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094872,"body":"Video chat was declined."},{"message_id":"374917199191644_398","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094871,"body":"Video chat has ended."},{"message_id":"374917199191644_397","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094836,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_396","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094833,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_395","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340094829,"body":"You were invited to a video chat."},{"message_id":"374917199191644_394","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094742,"body":"buy"},{"message_id":"374917199191644_393","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340094734,"body":"hello"},{"message_id":"374917199191644_392","thread_id":"374917199191644","author_id":100003362080562,"created_time":1340005538,"body":"Video chat was declined."},{"message_id":"374917199191644_391","thread_id":"374917199191644","author_id":100003256158867,"created_time":1340005533,"body":"Video chat was declined."}]
+17.07.12 08:43:46:295: call js = OnMessageFinished(true, [{"message_id":"374917199191644_405","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340098246","body":"Video chat was declined."},{"message_id":"374917199191644_404","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340098245","body":"Video chat has ended."},{"message_id":"374917199191644_403","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340098210","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_402","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340098192","body":"You were invited to a video chat."},{"message_id":"374917199191644_401","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094878","body":"Video chat was declined."},{"message_id":"374917199191644_400","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340094872","body":"Video chat was declined."},{"message_id":"374917199191644_399","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094872","body":"Video chat was declined."},{"message_id":"374917199191644_398","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094871","body":"Video chat has ended."},{"message_id":"374917199191644_397","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094836","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_396","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094833","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_395","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340094829","body":"You were invited to a video chat."},{"message_id":"374917199191644_394","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094742","body":"buy"},{"message_id":"374917199191644_393","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340094734","body":"hello"},{"message_id":"374917199191644_392","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1340005538","body":"Video chat was declined."},{"message_id":"374917199191644_391","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1340005533","body":"Video chat was declined."}]);
+17.07.12 08:43:46:296: InboxManager log=archiveMSG OnMessageFinished - ok, userData.length = 15
+17.07.12 08:43:46:308: PersonalChatHistory::beginSynchronization() synchron history & chat
+17.07.12 08:43:46:308: PersonalChatHistory::enumerateHistory - items: 15
+17.07.12 08:43:46:319: delete ArchiveManager
+17.07.12 08:43:46:319: VideoWidget: finishPHPConnectLoading
+17.07.12 08:43:46:319: Video options: {"sessionID":"2_MX41NTE0NzQxfjE5NC4xNTguMjA0LjUxflR1ZSBKdWwgMTcgMDE6NDM6NDggUERUIDIwMTJ-MC40NjY0MTUxNw","token":"T1==cGFydG5lcl9pZD01NTE0NzQxJnNka192ZXJzaW9uPXRicGhwLXYwLjkxLjIwMTEtMTAtMTImc2lnPTQ3NzRhMjJkZDI3MjEwNThlOTU0NjY0NjkxMDAwZDE3NTY5ZTgwOGM6c2Vzc2lvbl9pZD0yX01YNDFOVEUwTnpReGZqRTVOQzR4TlRndU1qQTBMalV4ZmxSMVpTQktkV3dnTVRjZ01ERTZORE02TkRnZ1VFUlVJREl3TVRKLU1DNDBOalkwTVRVeE53JmNyZWF0ZV90aW1lPTEzNDI1MTQ2Mjgmcm9sZT1wdWJsaXNoZXImbm9uY2U9MTM0MjUxNDYyOC42Njk0MTEwNDQzODE1Mg=="}
+17.07.12 08:43:46:319: VideoWidget: Connect session
+17.07.12 08:43:46:439: FIMConnectionManagerIRIS::OnIncomingXml: <iq from="chat.facebook.com" type="set" to="-100003256158867@chat.facebook.com/802a02b1_4C5028A82E20A" id="fbiq4C5028B9124AA">
+<own-message xmlns="http://www.facebook.com/xmpp/messages" to="-100003362080562@chat.facebook.com" self="true">
+<body>You were invited to a video chat.</body>
+</own-message>
+</iq>
+
+---
+
+17.07.12 08:43:46:440: mainElement.nodeName()=iq
+17.07.12 08:43:46:442: FIMConnectionManagerIRIS::OnOutgoingXml: <iq type="error" to="chat.facebook.com" id="fbiq4C5028B9124AA">
+<own-message xmlns="http://www.facebook.com/xmpp/messages" to="-100003362080562@chat.facebook.com" self="true">
+<body>You were invited to a video chat.</body>
+</own-message>
+<error type="cancel">
+<feature-not-implemented xmlns="urn:ietf:params:xml:ns:xmpp-stanzas"/>
+</error>
+</iq>
+
+---
+
+17.07.12 08:43:49:565: VideoWidget: Session connected
+17.07.12 08:43:49:565: on_VideoPageLoaded
+17.07.12 08:43:49:565: VideoWidget: Session is ok
+17.07.12 08:43:49:565: VideoWidget: Start video: audio=true, video=false
+17.07.12 08:43:49:585: VideoWidget: Video started
+17.07.12 08:43:49:585: VideoWidget: End of sessionConnectedHandler
+17.07.12 08:43:50:421: FIMConnectionManagerIRIS::OnIncomingXml: <message from="-100003362080562@chat.facebook.com" type="chat" to="-100003256158867@chat.facebook.com/802a02b1_4C5028A82E20A">
+<active xmlns="http://jabber.org/protocol/chatstates"/>
+<body>Video chat has started. Hurray!</body>
+</message>
+
+---
+
+17.07.12 08:43:50:421: mainElement.nodeName()=message
+17.07.12 08:43:50:422: FIMConnectionManagerIRIS::OnMessageReceived to -100003256158867@chat.facebook.com ------------------> "Video chat has started. Hurray!"; time = Тђ 17. шўы 11:43:50 2012 unixTime = 1342514630
+17.07.12 08:44:20:199: FIMConnectionManagerIRIS::OnConnectionClosed
+17.07.12 08:44:20:199: m_pcClient->isActive() =1
+17.07.12 08:44:20:199: m_uNumOnlineContacts clearing: 2
+17.07.12 08:44:20:199: CWorkFlowManager::disconnectFromServer
+17.07.12 08:44:20:199: PictureDownloader::on_disconnect
+17.07.12 08:44:20:199: PictureDownloader::on_disconnect finish
+17.07.12 08:44:20:199: CMainWindow::on_disconnect
+17.07.12 08:44:20:201: CMainWindow::on_disconnect before signedOut
+17.07.12 08:44:20:201: CMainWindow::on_disconnect finished
+17.07.12 08:44:20:208: PersonalChatHistory::enumerateHistory - items: 15
+17.07.12 08:44:20:226: on_videoClosed 100003362080562
+17.07.12 08:44:20:226: unpauseActivelyPausedVideochat - no active
+17.07.12 08:44:20:227: CStatisticModule::AddVideo {"type":"video","data":{"type":"audio", "conv_id":"0","friend_id_hash":"100003362080562" ,"sent_by":"100003256158867","duration":"0","error_code":"0"}}
+17.07.12 08:44:20:227: VideoWidget: Disconnect from server
+17.07.12 08:44:20:227: VideoWidget: TotalDisconnect
+17.07.12 08:44:20:227: VideoWidget: TotalDisconnect unsession
+17.07.12 08:44:20:254: VideoWidget: TotalDisconnect end
+17.07.12 08:44:20:257: FIMConnectionManagerIRIS::DisconnectFromServer
+17.07.12 08:44:20:257: FIMConnectionManagerIRIS::OnSigningInFailed
+17.07.12 08:44:20:257: PictureDownloader::on_disconnect
+17.07.12 08:44:20:257: PictureDownloader::on_disconnect finish
+17.07.12 08:44:20:257: m_uNumOnlineContacts clearing: 0
+17.07.12 08:44:20:258: PictureDownloader::on_disconnect
+17.07.12 08:44:20:258: PictureDownloader::on_disconnect finish
+17.07.12 08:44:20:363: VideoWidget: Session disconnected
+17.07.12 08:44:21:217: sending to url http://service.ftalkconnect.com/usage_statistics.php log = stats={"client_info": {"client_id":"{52C45E18-594A-4FCA-A26C-521553B9A44D}","lang":"en","fid":"100003256158867","test":"0","platform":"windows"},"data":[{"type":"video","data":{"type":"audio", "conv_id":"0","friend_id_hash":"100003362080562" ,"sent_by":"100003256158867","duration":"0","error_code":"0"}}]}
+17.07.12 08:44:21:557: log was send to customer server with code: 0
+17.07.12 08:44:50:262: VideoWidget: Closing on timer
+17.07.12 08:44:50:262: Video page closed - updated buttons
+17.07.12 08:44:50:574: VideoWidget: finishPHPDisconnectLoading
+17.07.12 08:44:50:574: Video page closed - updated buttons
+17.07.12 08:44:50:624: CMainWindow::on_pushButtonSignIn_clicked()
+17.07.12 08:44:50:624: Internet OK!
+17.07.12 08:44:50:624: m_serverCommunicator->communicate
+17.07.12 08:44:50:624: login request = <login_request><client_info><client_id>{52C45E18-594A-4FCA-A26C-521553B9A44D}</client_id><client_version>4.0.0.3765</client_version><language>en</language><referral>0</referral><origin>1</origin><brand>fTalk</brand><country>RussianFederation</country><test>0</test></client_info><user_info><user_id>100003256158867</user_id></user_info><system_info><os_version>6.1</os_version><browser_type>chrome.exe</browser_type><browser_version>20.0.1132.57</browser_version><platform>windows</platform></system_info></login_request>
+17.07.12 08:44:51:007: start server reconnect timer
+17.07.12 08:44:51:008: Sign in login: 100003256158867
+17.07.12 08:44:51:009: Authentication started.
+17.07.12 08:44:51:009: Getting JID by email started.
+17.07.12 08:44:51:009: FIMFacebookAPI::authorizeToFacebook started
+17.07.12 08:44:51:009: Start authentication by ID: https://www.facebook.com/dialog/oauth?client_id=285592984810370&redirect_uri=http://www.ftalk.com/client/login/login_success.html&display=popup&scope=xmpp_login,read_stream,publish_stream,friends_birthday,read_mailbox,user_photos,friends_photos,manage_friendlists,read_friendlists&response_type=token
+17.07.12 08:44:51:012: internet is ok
+17.07.12 08:44:51:741: FIMFacebookAPI::on_AttachObject()
+17.07.12 08:44:51:742: FIMFacebookAPI::on_pageLoaded() loaded Url =http://www.ftalk.com/client/login/login_success.html#access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD&expires_in=0
+17.07.12 08:44:51:754: js message ftalk is ok
+17.07.12 08:44:51:755: js message Result of expression 'document.getElementById('persist_box')' [null] is not an object.
+17.07.12 08:44:51:755: js message start
+17.07.12 08:44:51:755: js message http://www.ftalk.com/client/login/login_success.html#access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD&expires_in=0
+17.07.12 08:44:51:755: js message start parsing access token
+17.07.12 08:44:51:755: js message access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD
+17.07.12 08:44:51:755: HttpSend url = https://graph.facebook.com/me?access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD&fields=id,name,first_name,last_name,gender callback =OnUserFinished
+17.07.12 08:44:52:017: on_HttpSendFinished
+17.07.12 08:44:52:017: Incoming data = {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","gender":"female"}
+17.07.12 08:44:52:017: call js = OnUserFinished(true, {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","gender":"female"});
+17.07.12 08:44:52:018: FIMFacebookAPI::SetUserId ID = 100003256158867
+17.07.12 08:44:52:018: User ID set
+17.07.12 08:44:52:020: Got picture from storage for 100003256158867
+17.07.12 08:44:52:021: Got picture from storage for 100003256158867
+17.07.12 08:44:52:022: js message login-success
+17.07.12 08:44:52:022: js message like_check
+17.07.12 08:44:52:022: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=select+page_id+from+page_fan+where+uid=100003256158867+and+page_id=189685467708595&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnLikeFinished
+17.07.12 08:44:52:024: Destroying request for 100003256158867
+17.07.12 08:44:52:024: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:024: Destroying request for 100003256158867
+17.07.12 08:44:52:024: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:206: on_HttpSendFinished
+17.07.12 08:44:52:206: Incoming data = []
+17.07.12 08:44:52:206: call js = OnLikeFinished(true, []);
+17.07.12 08:44:52:206: js message OnLikeFinished - ok
+17.07.12 08:44:52:206: User Like = 0
+17.07.12 08:44:52:207: js message get_app_friends
+17.07.12 08:44:52:207: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+uid+FROM+user+WHERE+is_app_user=1+and+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=100003256158867)&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnFriendsFinished
+17.07.12 08:44:52:287: Facebook action finished
+17.07.12 08:44:52:287: {"id":"100003256158867","name":"Lilly Born","first_name":"Lilly","last_name":"Born","link":"http:\/\/www.facebook.com\/lilly.born.7","username":"lilly.born.7","gender":"female","locale":"en_US"}
+17.07.12 08:44:52:392: on_HttpSendFinished
+17.07.12 08:44:52:392: Incoming data = [{"uid":100000668769599},{"uid":100001634595253},{"uid":100001672726028},{"uid":100002954290207},{"uid":100003362080562}]
+17.07.12 08:44:52:393: call js = OnFriendsFinished(true, [{"uid":"100000668769599"},{"uid":"100001634595253"},{"uid":"100001672726028"},{"uid":"100002954290207"},{"uid":"100003362080562"}]);
+17.07.12 08:44:52:393: js message OnFriendsFinished - ok
+17.07.12 08:44:52:393: FIMFacebookAPI::AddAppFriend=100000668769599
+17.07.12 08:44:52:393: FIMFacebookAPI::AddAppFriend=100001634595253
+17.07.12 08:44:52:393: FIMFacebookAPI::AddAppFriend=100001672726028
+17.07.12 08:44:52:394: FIMFacebookAPI::AddAppFriend=100002954290207
+17.07.12 08:44:52:394: FIMFacebookAPI::AddAppFriend=100003362080562
+17.07.12 08:44:52:394: js message get_friends v4
+17.07.12 08:44:52:394: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+uid,+name,+first_name,+last_name,+pic_square,+birthday_date+FROM+user+WHERE+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=100003256158867)&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMyFriendsFinished
+17.07.12 08:44:52:584: on_HttpSendFinished
+17.07.12 08:44:52:584: Incoming data = [{"uid":1175742771,"name":"Kirill Koshkov","first_name":"Kirill","last_name":"Koshkov","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/48901_1175742771_9521_q.jpg","birthday_date":"03\/23\/1988"},{"uid":100000668769599,"name":"Rimma Martynenko","first_name":"Rimma","last_name":"Martynenko","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/203302_100000668769599_1007166_q.jpg","birthday_date":"10\/21\/1983"},{"uid":100001120676491,"name":"Petr Petrov","first_name":"Petr","last_name":"Petrov","pic_square":"http:\/\/profile.ak.fbcdn.net\/static-ak\/rsrc.php\/v2\/yo\/r\/UlIqmHJn-SK.gif","birthday_date":"01\/19\/1983"},{"uid":100001634595253,"name":"Stervochka Gadiukina","first_name":"Stervochka","last_name":"Gadiukina","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369601_100001634595253_613582620_q.jpg","birthday_date":"01\/20\/1981"},{"uid":100001672726028,"name":"Vika Jaka","first_name":"Vika","last_name":"Jaka","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/273677_100001672726028_2037584464_q.jpg","birthday_date":"09\/23\/1987"},{"uid":100001919771806,"name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441 \u0417\u0430\u043f\u0430\u0434","first_name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441","last_name":"\u0417\u0430\u043f\u0430\u0434","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/49938_100001919771806_4700332_q.jpg","birthday_date":null},{"uid":100002528644542,"name":"Belarustourist Belarus","first_name":"Belarustourist","last_name":"Belarus","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/211480_100002528644542_4426605_q.jpg","birthday_date":null},{"uid":100002954290207,"name":"Arti  Qaa","first_name":"Arti","last_name":"Qaa","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-ash2\/273639_100002954290207_892089430_q.jpg","birthday_date":"01\/15\/1989"},{"uid":100003362080562,"name":"Ruslana Pravdikova","first_name":"Ruslana","last_name":"Pravdikova","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369101_100003362080562_1111812503_q.jpg","birthday_date":"02\/08\/1983"},{"uid":100003576902339,"name":"\u041f\u043e\u043b\u0438\u043d\u0430 \u041c\u0430\u0443\u0437\u0435\u0440","first_name":"\u041f\u043e\u043b\u0438\u043d\u0430","last_name":"\u041c\u0430\u0443\u0437\u0435\u0440","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/173414_100003576902339_554457938_q.jpg","birthday_date":"04\/04\/1982"}]
+17.07.12 08:44:52:585: call js = OnMyFriendsFinished(true, [{"uid":"1175742771","name":"Kirill Koshkov","first_name":"Kirill","last_name":"Koshkov","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/48901_1175742771_9521_q.jpg","birthday_date":"03\/23\/1988"},{"uid":"100000668769599","name":"Rimma Martynenko","first_name":"Rimma","last_name":"Martynenko","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/203302_100000668769599_1007166_q.jpg","birthday_date":"10\/21\/1983"},{"uid":"100001120676491","name":"Petr Petrov","first_name":"Petr","last_name":"Petrov","pic_square":"http:\/\/profile.ak.fbcdn.net\/static-ak\/rsrc.php\/v2\/yo\/r\/UlIqmHJn-SK.gif","birthday_date":"01\/19\/1983"},{"uid":"100001634595253","name":"Stervochka Gadiukina","first_name":"Stervochka","last_name":"Gadiukina","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369601_100001634595253_613582620_q.jpg","birthday_date":"01\/20\/1981"},{"uid":"100001672726028","name":"Vika Jaka","first_name":"Vika","last_name":"Jaka","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/273677_100001672726028_2037584464_q.jpg","birthday_date":"09\/23\/1987"},{"uid":"100001919771806","name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441 \u0417\u0430\u043f\u0430\u0434","first_name":"\u0418\u043d\u0442\u0435\u0440\u0444\u0430\u043a\u0441","last_name":"\u0417\u0430\u043f\u0430\u0434","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/49938_100001919771806_4700332_q.jpg","birthday_date":null},{"uid":"100002528644542","name":"Belarustourist Belarus","first_name":"Belarustourist","last_name":"Belarus","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/211480_100002528644542_4426605_q.jpg","birthday_date":null},{"uid":"100002954290207","name":"Arti  Qaa","first_name":"Arti","last_name":"Qaa","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-ash2\/273639_100002954290207_892089430_q.jpg","birthday_date":"01\/15\/1989"},{"uid":"100003362080562","name":"Ruslana Pravdikova","first_name":"Ruslana","last_name":"Pravdikova","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/369101_100003362080562_1111812503_q.jpg","birthday_date":"02\/08\/1983"},{"uid":"100003576902339","name":"\u041f\u043e\u043b\u0438\u043d\u0430 \u041c\u0430\u0443\u0437\u0435\u0440","first_name":"\u041f\u043e\u043b\u0438\u043d\u0430","last_name":"\u041c\u0430\u0443\u0437\u0435\u0440","pic_square":"http:\/\/profile.ak.fbcdn.net\/hprofile-ak-snc4\/173414_100003576902339_554457938_q.jpg","birthday_date":"04\/04\/1982"}]);
+17.07.12 08:44:52:586: js message OnMyFriendsFinished - ok
+17.07.12 08:44:52:587: Got picture from storage for 1175742771
+17.07.12 08:44:52:588: Got picture from storage for 100000668769599
+17.07.12 08:44:52:589: Got picture from storage for 100001120676491
+17.07.12 08:44:52:590: Got picture from storage for 100001634595253
+17.07.12 08:44:52:591: Got picture from storage for 100001672726028
+17.07.12 08:44:52:592: Got picture from storage for 100001919771806
+17.07.12 08:44:52:594: Got picture from storage for 100002528644542
+17.07.12 08:44:52:595: Got picture from storage for 100002954290207
+17.07.12 08:44:52:596: Got picture from storage for 100003362080562
+17.07.12 08:44:52:597: Got picture from storage for 100003576902339
+17.07.12 08:44:52:597: js message get_friendlist
+17.07.12 08:44:52:597: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+flid+FROM+friendlist+WHERE+owner=me()+and+type='close_friends'&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnFriendlistFinished
+17.07.12 08:44:52:598: Destroying request for 1175742771
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100000668769599
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100001120676491
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100001634595253
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100001672726028
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100001919771806
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100002528644542
+17.07.12 08:44:52:599: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:599: Destroying request for 100002954290207
+17.07.12 08:44:52:600: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:600: Destroying request for 100003362080562
+17.07.12 08:44:52:600: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:600: Destroying request for 100003576902339
+17.07.12 08:44:52:600: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:52:776: on_HttpSendFinished
+17.07.12 08:44:52:776: Incoming data = [{"flid":"111441708974367"}]
+17.07.12 08:44:52:776: call js = OnFriendlistFinished(true, [{"flid":"111441708974367"}]);
+17.07.12 08:44:52:776: js message OnFriendlistFinished - ok
+17.07.12 08:44:52:776: js message get_close_friends
+17.07.12 08:44:52:776: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+uid+FROM+friendlist_member+WHERE+flid=111441708974367&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnCloseFriendsFinished
+17.07.12 08:44:52:967: on_HttpSendFinished
+17.07.12 08:44:52:967: Incoming data = []
+17.07.12 08:44:52:967: call js = OnCloseFriendsFinished(true, []);
+17.07.12 08:44:52:967: js message OnCloseFriendsFinished - ok
+17.07.12 08:44:52:967: FIMConnectionManagerIRIS::OnSigningInSucceeded - Getting JID by email succeeded.
+17.07.12 08:44:52:967: Saving cookies
+17.07.12 08:44:52:971: Cookie: c_user=100003256158867; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:971: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:44:52:971: Cookie: datr=CFEyT-JuIqMlDdagt_aNwQ_N; HttpOnly; expires=Sat, 12-Jul-2014 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:971: Date: бс 12. шўы 08:29:40 2014
+17.07.12 08:44:52:971: Cookie: fr=0RvEJUGsglpU1YR21.AWXpO2lyu9BDPuY0wkPYKn9sKbg; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:971: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:44:52:971: Cookie: lu=ThNmGbH7A0nxfQ7GbpddiU2w; HttpOnly; expires=Sat, 12-Jul-2014 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:971: Date: бс 12. шўы 08:29:40 2014
+17.07.12 08:44:52:972: Cookie: s=Aa5ZpDhl4cK0N4yp.BP_or0; secure; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:972: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:44:52:972: Cookie: xs=1%3Az_XKntxuq8l89g%3A0%3A1342081780; HttpOnly; expires=Sat, 11-Aug-2012 08:29:40 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:972: Date: бс 11. рту 08:29:40 2012
+17.07.12 08:44:52:972: Cookie: locale=en_EN; expires=Tue, 24-Jul-2012 08:44:53 GMT; domain=.facebook.com; path=/
+17.07.12 08:44:52:972: Date: Тђ 24. шўы 08:44:53 2012
+17.07.12 08:44:52:973: CMainWindow::on_signedIn like pressed = 0
+17.07.12 08:44:52:973: CMainWindow::ShowLikeButton()
+17.07.12 08:44:52:975: Like Url = http://extensions.ftalking.com/client/like/index.php
+17.07.12 08:44:52:975: Connecting to XMPP server started.
+17.07.12 08:44:54:081: FIMConnectionManagerIRIS::OnOutgoingXml: <?xml version="1.0"?>
+
+---
+
+17.07.12 08:44:54:081: FIMConnectionManagerIRIS::OnOutgoingXml: <stream:stream xmlns:stream="http://etherx.jabber.org/streams" version="1.0" xmlns="jabber:client" to="chat.facebook.com">
+
+---
+
+17.07.12 08:44:54:302: FIMConnectionManagerIRIS::OnIncomingXml: <?xml version="1.0"?><stream:stream id="D8CD9FDC" from="chat.facebook.com" version="1.0" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" xml:lang="en">
+
+---
+
+17.07.12 08:44:54:302: mainElement.nodeName()=stream:stream
+17.07.12 08:44:54:302: FIMConnectionManagerIRIS::OnIncomingXml: <stream:features>
+<starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls"/>
+<mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl">
+<mechanism>X-FACEBOOK-PLATFORM</mechanism>
+<mechanism>DIGEST-MD5</mechanism>
+</mechanisms>
+</stream:features>
+
+---
+
+17.07.12 08:44:54:303: mainElement.nodeName()=stream:features
+17.07.12 08:44:54:303: FIMConnectionManagerIRIS::OnOutgoingXml: <starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls"/>
+
+---
+
+17.07.12 08:44:54:518: FIMConnectionManagerIRIS::OnIncomingXml: <proceed xmlns="urn:ietf:params:xml:ns:xmpp-tls"/>
+
+---
+
+17.07.12 08:44:54:518: mainElement.nodeName()=proceed
+17.07.12 08:44:54:975: FIMConnectionManagerIRIS::tls_handshaken()
+17.07.12 08:44:54:975: connection is closed
+17.07.12 08:44:54:975: FIMConnectionManagerIRIS::OnOutgoingXml: <?xml version="1.0"?>
+
+---
+
+17.07.12 08:44:54:975: FIMConnectionManagerIRIS::OnOutgoingXml: <stream:stream xmlns:stream="http://etherx.jabber.org/streams" version="1.0" xmlns="jabber:client" to="chat.facebook.com">
+
+---
+
+17.07.12 08:44:55:205: FIMConnectionManagerIRIS::OnIncomingXml: <?xml version="1.0"?><stream:stream id="E23653BD" from="chat.facebook.com" version="1.0" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" xml:lang="en">
+
+---
+
+17.07.12 08:44:55:205: mainElement.nodeName()=stream:stream
+17.07.12 08:44:55:206: FIMConnectionManagerIRIS::OnIncomingXml: <stream:features>
+<mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl">
+<mechanism>X-FACEBOOK-PLATFORM</mechanism>
+<mechanism>DIGEST-MD5</mechanism>
+</mechanisms>
+</stream:features>
+
+---
+
+17.07.12 08:44:55:206: mainElement.nodeName()=stream:features
+17.07.12 08:44:55:207: FIMConnectionManagerIRIS::OnOutgoingXml: <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="X-FACEBOOK-PLATFORM"/>
+
+---
+
+17.07.12 08:44:55:430: FIMConnectionManagerIRIS::OnIncomingXml: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dmVyc2lvbj0xJm1ldGhvZD1hdXRoLnhtcHBfbG9naW4mbm9uY2U9RTFFRTE0MUI5M0RFRTNGRDQyNzMzMTYxQjMxQ0FERDQ=</challenge>
+
+---
+
+17.07.12 08:44:55:430: mainElement.nodeName()=challenge
+17.07.12 08:44:55:431: FIMConnectionManagerIRIS::OnOutgoingXml: <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">YXBpX2tleT0yODU1OTI5ODQ4MTAzNzAmY2FsbF9pZD0xMzQyNTE0Njk1Jm1ldGhvZD1hdXRoLnhtcHBfbG9naW4mbm9uY2U9RTFFRTE0MUI5M0RFRTNGRDQyNzMzMTYxQjMxQ0FERDQmYWNjZXNzX3Rva2VuPUFBQUVEdnN4bzg0SUJBSEVVNHlwWkF1VTc0bVZNYTMxQnhXWkF1M2FLam84ZEZ4TUNuODdFWVpCUnNqbGx6WkM5MW5IQWptQWI3Y3ZuVWR3allTd3VCWU13YnNvWkJaQ1Z2WkFkcmk1aUlUNDJ3WkRaRCZ2PTEuMA==</response>
+
+---
+
+17.07.12 08:44:55:725: FIMConnectionManagerIRIS::OnIncomingXml: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl"/>
+
+---
+
+17.07.12 08:44:55:725: mainElement.nodeName()=success
+17.07.12 08:44:55:725: FIMConnectionManagerIRIS::OnOutgoingXml: <?xml version="1.0"?>
+
+---
+
+17.07.12 08:44:55:725: FIMConnectionManagerIRIS::OnOutgoingXml: <stream:stream xmlns:stream="http://etherx.jabber.org/streams" version="1.0" xmlns="jabber:client" to="chat.facebook.com">
+
+---
+
+17.07.12 08:44:55:947: FIMConnectionManagerIRIS::OnIncomingXml: <?xml version="1.0"?><stream:stream id="AFB2C759" from="chat.facebook.com" version="1.0" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" xml:lang="en">
+
+---
+
+17.07.12 08:44:55:947: mainElement.nodeName()=stream:stream
+17.07.12 08:44:55:947: FIMConnectionManagerIRIS::OnIncomingXml: <stream:features>
+<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"/>
+<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>
+</stream:features>
+
+---
+
+17.07.12 08:44:55:947: mainElement.nodeName()=stream:features
+17.07.12 08:44:55:948: FIMConnectionManagerIRIS::OnOutgoingXml: <iq type="set" id="bind_1">
+<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"/>
+</iq>
+
+---
+
+17.07.12 08:44:56:170: FIMConnectionManagerIRIS::OnIncomingXml: <iq xmlns="jabber:client" type="result" id="bind_1">
+<bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
+<jid>-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200</jid>
+</bind>
+</iq>
+
+---
+
+17.07.12 08:44:56:170: mainElement.nodeName()=iq
+17.07.12 08:44:56:170: FIMConnectionManagerIRIS::OnStreamAuthenticated
+17.07.12 08:44:56:171: FIMConnectionManagerIRIS::OnOutgoingXml: <iq type="set" id="aab8a">
+<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>
+</iq>
+
+---
+
+17.07.12 08:44:56:171: Authentication successfull
+17.07.12 08:44:56:649: FIMConnectionManagerIRIS::OnIncomingXml: <iq type="result" id="aab8a">
+<session xmlns="urn:ietf:params:xml:ns:xmpp-session"/>
+</iq>
+
+---
+
+17.07.12 08:44:56:649: mainElement.nodeName()=iq
+17.07.12 08:44:56:649: FIMConnectionManagerIRIS::OnSessionStartFinished
+17.07.12 08:44:56:649: FIMConnectionManagerIRIS::SessionStarted
+17.07.12 08:44:56:652: InboxManager::loaded Url =
+17.07.12 08:44:56:664: Got picture from storage for 100003256158867
+17.07.12 08:44:56:664: next Invite Date is зђ шўы 19 2012
+17.07.12 08:44:56:670: PersonalChatHistory::enumerateHistory - items: 16
+17.07.12 08:44:56:683: FIMConnectionManagerIRIS::OnOutgoingXml: <presence type="unavailable"/>
+
+---
+
+17.07.12 08:44:56:683: FIMConnectionManagerIRIS::OnOutgoingXml: <presence>
+<priority>0</priority>
+</presence>
+
+---
+
+17.07.12 08:44:56:684: FIMConnectionManagerIRIS::IsConnectedToServer()
+17.07.12 08:44:56:684: FIMFacebookAPI::updatePhotos started
+17.07.12 08:44:56:695: Destroying request for 100003256158867
+17.07.12 08:44:56:695: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:56:698: FIMConnectionManagerIRIS::OnIncomingXml: <presence from="-100001672726028@chat.facebook.com" to="-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200">
+<x xmlns="vcard-temp:x:update">
+<photo>ec37fab486d38d856f3c275b449aa49c193d91b0</photo>
+</x>
+</presence>
+
+---
+
+17.07.12 08:44:56:698: mainElement.nodeName()=presence
+17.07.12 08:44:56:698: parsing presence
+17.07.12 08:44:56:699: m_uNumOnlineContacts was incremented: 1
+17.07.12 08:44:57:070: FIMFacebookAPI::on_AttachObject()
+17.07.12 08:44:57:070: js message ftalk is ok
+17.07.12 08:44:57:071: js message start
+17.07.12 08:44:57:071: js message access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD
+17.07.12 08:44:57:071: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+owner,+modified_major+FROM+album+WHERE+type='profile'+AND+((owner+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=me()))+OR+(owner=me()))&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnPhotosFinished
+17.07.12 08:44:57:136: InboxManager::on_AttachObject()
+17.07.12 08:44:57:136: InboxManager log=get_inbox
+17.07.12 08:44:57:136: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+thread_id,+recipients+FROM+thread+WHERE+folder_id=0+and+unread!=0+and+viewer_id=me()+AND+updated_time+>+1342514626&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnInboxFinished
+17.07.12 08:44:57:137: WorkWebViewBase -- Load finished
+17.07.12 08:44:57:137: InboxManager::Url =http://extensions.ftalkconnect.com/client/inbox/inbox-v4.html
+17.07.12 08:44:57:138: FIMConnectionManagerIRIS::OnIncomingXml: <presence from="-100001672726028@chat.facebook.com" to="-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200">
+<x xmlns="vcard-temp:x:update">
+<photo>ec37fab486d38d856f3c275b449aa49c193d91b0</photo>
+</x>
+</presence>
+
+---
+
+17.07.12 08:44:57:138: mainElement.nodeName()=presence
+17.07.12 08:44:57:138: parsing presence
+17.07.12 08:44:57:139: FIMConnectionManagerIRIS::OnIncomingXml: <presence from="-100001919771806@chat.facebook.com" to="-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200">
+<x xmlns="vcard-temp:x:update">
+<photo>83a0b62a190a4d36a101bbf7f5e8b844af683123</photo>
+</x>
+</presence>
+
+---
+
+17.07.12 08:44:57:139: mainElement.nodeName()=presence
+17.07.12 08:44:57:139: parsing presence
+17.07.12 08:44:57:139: m_uNumOnlineContacts was incremented: 2
+17.07.12 08:44:57:139: FIMConnectionManagerIRIS::OnIncomingXml: <presence from="-100003362080562@chat.facebook.com" to="-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200">
+<x xmlns="vcard-temp:x:update">
+<photo>b1dba43f1666599125ef69b3b7a7170b846e4448</photo>
+</x>
+</presence>
+
+---
+
+17.07.12 08:44:57:139: mainElement.nodeName()=presence
+17.07.12 08:44:57:139: parsing presence
+17.07.12 08:44:57:139: m_uNumOnlineContacts was incremented: 3
+17.07.12 08:44:57:291: on_HttpSendFinished
+17.07.12 08:44:57:291: Incoming data = [{"owner":1175742771,"modified_major":1254917475},{"owner":100000668769599,"modified_major":1312463792},{"owner":100001634595253,"modified_major":1326887053},{"owner":100001672726028,"modified_major":1341995268},{"owner":100001919771806,"modified_major":1290090077},{"owner":100002528644542,"modified_major":1307425031},{"owner":100002954290207,"modified_major":1316769229},{"owner":100003362080562,"modified_major":1326892582},{"owner":100003576902339,"modified_major":1328184387}]
+17.07.12 08:44:57:291: call js = OnPhotosFinished(true, [{"owner":"1175742771","modified_major":"1254917475"},{"owner":"100000668769599","modified_major":"1312463792"},{"owner":"100001634595253","modified_major":"1326887053"},{"owner":"100001672726028","modified_major":"1341995268"},{"owner":"100001919771806","modified_major":"1290090077"},{"owner":"100002528644542","modified_major":"1307425031"},{"owner":"100002954290207","modified_major":"1316769229"},{"owner":"100003362080562","modified_major":"1326892582"},{"owner":"100003576902339","modified_major":"1328184387"}]);
+17.07.12 08:44:57:292: js message OnPhotosFinished - ok
+17.07.12 08:44:57:292: SetPhotoStamp(1175742771, 1254917475)
+17.07.12 08:44:57:293: Got picture from storage for 1175742771
+17.07.12 08:44:57:293: SetPhotoStamp(100000668769599, 1312463792)
+17.07.12 08:44:57:294: Got picture from storage for 100000668769599
+17.07.12 08:44:57:295: SetPhotoStamp(100001634595253, 1326887053)
+17.07.12 08:44:57:296: Got picture from storage for 100001634595253
+17.07.12 08:44:57:296: SetPhotoStamp(100001672726028, 1341995268)
+17.07.12 08:44:57:297: Got picture from storage for 100001672726028
+17.07.12 08:44:57:297: SetPhotoStamp(100001919771806, 1290090077)
+17.07.12 08:44:57:298: Got picture from storage for 100001919771806
+17.07.12 08:44:57:298: SetPhotoStamp(100002528644542, 1307425031)
+17.07.12 08:44:57:299: Got picture from storage for 100002528644542
+17.07.12 08:44:57:300: SetPhotoStamp(100002954290207, 1316769229)
+17.07.12 08:44:57:301: Got picture from storage for 100002954290207
+17.07.12 08:44:57:301: SetPhotoStamp(100003362080562, 1326892582)
+17.07.12 08:44:57:302: Got picture from storage for 100003362080562
+17.07.12 08:44:57:302: SetPhotoStamp(100003576902339, 1328184387)
+17.07.12 08:44:57:303: Got picture from storage for 100003576902339
+17.07.12 08:44:57:303: js message Update is finished
+17.07.12 08:44:57:306: Destroying request for 1175742771
+17.07.12 08:44:57:306: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:306: Destroying request for 100000668769599
+17.07.12 08:44:57:306: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:306: Destroying request for 100001634595253
+17.07.12 08:44:57:306: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:306: Destroying request for 100001672726028
+17.07.12 08:44:57:306: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:306: Destroying request for 100001919771806
+17.07.12 08:44:57:307: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:307: Destroying request for 100002528644542
+17.07.12 08:44:57:307: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:307: Destroying request for 100002954290207
+17.07.12 08:44:57:307: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:307: Destroying request for 100003362080562
+17.07.12 08:44:57:307: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:307: Destroying request for 100003576902339
+17.07.12 08:44:57:307: PictureDownloader::on_pictureLoaded
+17.07.12 08:44:57:815: on_HttpSendFinished
+17.07.12 08:44:57:816: Incoming data = [{"thread_id":"374917199191644","recipients":[100003256158867,100003362080562]}]
+17.07.12 08:44:57:816: call js = OnInboxFinished(true, [{"thread_id":"374917199191644","recipients":[100003256158867,100003362080562]}]);
+17.07.12 08:44:57:816: InboxManager log=OnInboxFinished - ok
+17.07.12 08:44:57:816: InboxManager log=get_messages
+17.07.12 08:44:57:817: HttpSend url = https://api.facebook.com/method/fql.query?format=json&query=SELECT+message_id,+thread_id,+author_id,+created_time,+body+FROM message+WHERE+thread_id+IN+(374917199191644)+AND+created_time+>+1342514626&access_token=AAAEDvsxo84IBAHEU4ypZAuU74mVMa31BxWZAu3aKjo8dFxMCn87EYZBRsjllzZC91nHAjmAb7cvnUdwjYSwuBYMwbsoZBZCVvZAdri5iIT42wZDZD callback =OnMessageFinished
+17.07.12 08:44:58:021: on_HttpSendFinished
+17.07.12 08:44:58:021: Incoming data = [{"message_id":"374917199191644_541","thread_id":"374917199191644","author_id":100003256158867,"created_time":1342514627,"body":"You were invited to a video chat."},{"message_id":"374917199191644_542","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342514632,"body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_543","thread_id":"374917199191644","author_id":100003362080562,"created_time":1342514672,"body":"Video chat has ended."}]
+17.07.12 08:44:58:022: call js = OnMessageFinished(true, [{"message_id":"374917199191644_541","thread_id":"374917199191644","author_id":"100003256158867","created_time":"1342514627","body":"You were invited to a video chat."},{"message_id":"374917199191644_542","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342514632","body":"Video chat has started. Hurray!"},{"message_id":"374917199191644_543","thread_id":"374917199191644","author_id":"100003362080562","created_time":"1342514672","body":"Video chat has ended."}]);
+17.07.12 08:44:58:022: InboxManager log=OnMessageFinished - ok
+17.07.12 08:44:58:022: InboxManager log=get_recipients for id = 374917199191644
+17.07.12 08:44:58:023: InboxManager log=recip thread id = 374917199191644
+17.07.12 08:44:58:023: InboxManager log=found!
+17.07.12 08:44:58:023: InboxManager::AddNewMailItem from=100003256158867 message=You were invited to a video chat.
+17.07.12 08:44:58:023: InboxManager log=get_recipients for id = 374917199191644
+17.07.12 08:44:58:024: InboxManager log=recip thread id = 374917199191644
+17.07.12 08:44:58:024: InboxManager log=found!
+17.07.12 08:44:58:024: InboxManager::AddNewMailItem from=100003362080562 message=Video chat has started. Hurray!
+17.07.12 08:44:58:025: InboxManager log=get_recipients for id = 374917199191644
+17.07.12 08:44:58:025: InboxManager log=recip thread id = 374917199191644
+17.07.12 08:44:58:025: InboxManager log=found!
+17.07.12 08:44:58:025: InboxManager::AddNewMailItem from=100003362080562 message=Video chat has ended.
+17.07.12 08:45:12:140: FIMConnectionManagerIRIS::OnIncomingXml: <message from="-100003362080562@chat.facebook.com" type="chat" to="-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200">
+<active xmlns="http://jabber.org/protocol/chatstates"/>
+<body>You were invited to a video chat.</body>
+</message>
+
+---
+
+17.07.12 08:45:12:141: mainElement.nodeName()=message
+17.07.12 08:45:12:142: FIMConnectionManagerIRIS::OnMessageReceived to -100003256158867@chat.facebook.com ------------------> "You were invited to a video chat."; time = Тђ 17. шўы 11:45:12 2012 unixTime = 1342514712
+17.07.12 08:45:12:152: Got picture from storage for 100003362080562
+17.07.12 08:45:12:174: Destroying request for 100003362080562
+17.07.12 08:45:12:174: PictureDownloader::on_pictureLoaded
+17.07.12 08:45:14:249: on_AcceptVideoChat: 100003362080562
+17.07.12 08:45:14:249: pauseActiveVideochat - set active  100003362080562
+17.07.12 08:45:14:255: VideoWidget: Connect to server
+17.07.12 08:45:14:263: VideoWidget: Connect to server core
+17.07.12 08:45:14:263: Video URL: http://service.ftalk.com/video/cc.php?myID=100003256158867&friendID=100003362080562
+17.07.12 08:45:15:439: VideoWidget: finishPHPConnectLoading
+17.07.12 08:45:15:439: Video options: {"sessionID":"1_MX41NTE0NzQxfjE5NC4xNTguMjA0LjUxflR1ZSBKdWwgMTcgMDE6NDU6MTcgUERUIDIwMTJ-MC4zNTQ1MDcxNQ","token":"T1==cGFydG5lcl9pZD01NTE0NzQxJnNka192ZXJzaW9uPXRicGhwLXYwLjkxLjIwMTEtMTAtMTImc2lnPTQyYjIyYzE1ZjhhOTY2ZWVmZGQ0ZjFiN2I1NjkyOTJkODkzNjNhZjQ6c2Vzc2lvbl9pZD0xX01YNDFOVEUwTnpReGZqRTVOQzR4TlRndU1qQTBMalV4ZmxSMVpTQktkV3dnTVRjZ01ERTZORFU2TVRjZ1VFUlVJREl3TVRKLU1DNHpOVFExTURjeE5RJmNyZWF0ZV90aW1lPTEzNDI1MTQ3MTcmcm9sZT1wdWJsaXNoZXImbm9uY2U9MTM0MjUxNDcxNy45NDkzMTQ1NzkyNjc1MA=="}
+17.07.12 08:45:15:439: VideoWidget: Connect session
+17.07.12 08:45:18:739: VideoWidget: Session connected
+17.07.12 08:45:18:739: on_VideoPageLoaded
+17.07.12 08:45:18:739: VideoWidget: Session is ok
+17.07.12 08:45:18:740: VideoWidget: Start video: audio=true, video=false
+17.07.12 08:45:18:749: VideoWidget: Video started
+17.07.12 08:45:18:749: VideoWidget: End of sessionConnectedHandler
+17.07.12 08:46:02:916: FIMConnectionManagerIRIS::OnIncomingXml: <message from="-100003362080562@chat.facebook.com" type="chat" to="-100003256158867@chat.facebook.com/36d02b12_4C5028FB92200">
+<active xmlns="http://jabber.org/protocol/chatstates"/>
+<body>Video chat has ended.</body>
+</message>
+
+---
+
+17.07.12 08:46:02:916: mainElement.nodeName()=message
+17.07.12 08:46:02:916: FIMConnectionManagerIRIS::OnMessageReceived to -100003256158867@chat.facebook.com ------------------> "Video chat has ended."; time = Тђ 17. шўы 11:46:02 2012 unixTime = 1342514762
+17.07.12 08:46:02:923: on_videoClosed 100003362080562
+17.07.12 08:46:02:924: unpauseActivelyPausedVideochat - no active
+17.07.12 08:46:02:924: CStatisticModule::AddVideo {"type":"video","data":{"type":"video", "conv_id":"0","friend_id_hash":"100003362080562" ,"sent_by":"100003362080562","duration":"0","error_code":"0"}}
+17.07.12 08:46:02:924: VideoWidget: Disconnect from server
+17.07.12 08:46:02:924: VideoWidget: TotalDisconnect
+17.07.12 08:46:02:924: VideoWidget: TotalDisconnect unsession
+17.07.12 08:46:02:955: VideoWidget: TotalDisconnect end
+17.07.12 08:46:03:045: VideoWidget: Session disconnected
+17.07.12 08:46:03:248: VideoWidget: finishPHPDisconnectLoading
+17.07.12 08:46:03:248: Video page closed - updated buttons
+17.07.12 08:46:11:771: Destroying request for 100003256158867
+17.07.12 08:46:11:771: PictureDownloader::on_pictureLoaded
+17.07.12 08:46:11:771: Destroying request for 100003256158867
+17.07.12 08:46:11:771: PictureDownloader::on_pictureLoaded
+17.07.12 08:46:11:779: CWorkFlowManager::disconnectFromServer
+17.07.12 08:46:11:779: Close all conversations
+17.07.12 08:46:11:796: FIMConnectionManagerIRIS::DisconnectFromServer
+17.07.12 08:46:11:796: FIMConnectionManagerIRIS::OnSigningInFailed
+17.07.12 08:46:11:796: PictureDownloader::on_disconnect
+17.07.12 08:46:11:796: PictureDownloader::on_disconnect finish
+17.07.12 08:46:11:797: FIMConnectionManagerIRIS::OnOutgoingXml: <presence type="unavailable"/>
+
+---
+
+17.07.12 08:46:11:797: m_uNumOnlineContacts clearing: 3
+17.07.12 08:46:11:797: PictureDownloader::on_disconnect
+17.07.12 08:46:11:797: PictureDownloader::on_disconnect finish
+17.07.12 08:46:11:797: FIMConnectionManagerIRIS::OnOutgoingXml: </stream:stream>
+
+---
+
+17.07.12 08:46:11:797: m_uNumOnlineContacts clearing: 0
+17.07.12 08:46:11:807: --- Logging Stopped ---
