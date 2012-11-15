@@ -19,7 +19,7 @@ void Copy(IPacketSource* source, IPacketSink* sink)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	IPacketSource* source = new FileSource(L"C:\\file.txt"); 
+	IPacketSource* source = new FileSource(L"file.txt"); 
 	IPacketSink* sink = new FileSink();
 	Copy(source, sink);
 	return 0;

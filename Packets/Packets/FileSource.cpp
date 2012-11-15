@@ -2,6 +2,7 @@
 #include "FileSource.h"
 
 
+
 FileSource::FileSource(const std::wstring& fileName)
 	: m_fileName(fileName)
 	, m_packet(new PacketType)
@@ -13,7 +14,6 @@ FileSource::FileSource(const std::wstring& fileName)
                        FILE_ATTRIBUTE_NORMAL, 
 					   nullptr)))
 {
-	 
 }
 
 PacketType* FileSource::GetPacket()
@@ -21,6 +21,7 @@ PacketType* FileSource::GetPacket()
 	if (m_fileHandle->IsValid())
 	{
 		ReadFile(**m_fileHandle, m_packet->m_array, m_packet->GetFullSize(), reinterpret_cast<LPDWORD>(&(m_packet->m_size)), nullptr);
+		
 		return m_packet;
 	}
 	return nullptr;

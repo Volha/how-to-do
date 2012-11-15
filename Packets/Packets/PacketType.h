@@ -2,4 +2,4 @@
 
 #include "Packet.h"
 
-typedef Packet<1024> PacketType;
+typedef Packet<8> PacketType;

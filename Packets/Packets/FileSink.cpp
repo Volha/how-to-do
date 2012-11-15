@@ -13,7 +13,7 @@ FileSink::FileSink()
 					nullptr
 					)))
 {
-	
+	SetFilePointer(**m_fileHandle, 0, nullptr, FILE_BEGIN); 
 }
 
 void FileSink::Consume(PacketType* p)
