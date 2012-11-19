@@ -1,13 +1,13 @@
 #pragma once
 #include <string>
 #include <map>
-class InterpreterClass;
-
-typedef void (InterpreterClass:: *Function)(const std::string& param);
-typedef std::map<std::string, Function> MapType;
+#include <vector>
 
 class InterpreterClass
 {
+	class Operation;
+	typedef std::map<std::string, Operation> MapType;
+	enum TypesEnum {STRING, INT};
 public:
 	InterpreterClass();
 	~InterpreterClass();
@@ -17,7 +17,11 @@ public:
 private:
 	void Print(const std::string& params = "");
 	void Decorate(const std::string& params = "");
+	void Sum(const std::string& params = "");
 
+
+	void AddOperation(const std::string& operationName, const Operation& operation);
+	Functor CreateFunctor(const std::vector<std::string>& lexems);
 private:
-	MapType* m_commandMap;
+	MapType m_commandMap;
 };
