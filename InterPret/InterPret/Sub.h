@@ -1,6 +1,5 @@
 #pragma once
 #include "Operation.h"
-#include <stdexcept>
 #include <boost\lexical_cast.hpp>
 
 class Sub : public Operation

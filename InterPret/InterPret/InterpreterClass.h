@@ -8,7 +8,7 @@ class InterpreterClass
 {
 	typedef std::function<void()> Functor; 
 	enum TypesEnum {STRING, INT};
-	enum CommandsEnum {ADD, SUB, PRINT};
+	enum CommandsEnum {ADD, SUB, PRINT, THREADS};
 	typedef std::map<CommandsEnum, std::vector<TypesEnum>> MapType;
 	typedef std::map<std::string, CommandsEnum> CommandMap;
 

@@ -7,8 +7,10 @@
 #include "Add.h"
 #include "Print.h"
 #include "Sub.h"
+#include "RunThreads.h"
 #include <boost\tokenizer.hpp>
 #include <boost\lexical_cast.hpp>
+#include <boost\thread.hpp>
 
 InterpreterClass::InterpreterClass()
 {
@@ -16,6 +18,7 @@ InterpreterClass::InterpreterClass()
 	m_strCommands.insert(std::make_pair("Add", ADD)); 
 	m_strCommands.insert(std::make_pair("Sub", SUB)); 
 	m_strCommands.insert(std::make_pair("Print", PRINT)); 
+	m_strCommands.insert(std::make_pair("RunThreads", THREADS));
 }
 
 InterpreterClass::~InterpreterClass()
@@ -27,6 +30,7 @@ void InterpreterClass::InitializeMap()
 	AddOperation(PRINT, ArgumentsList(1, STRING));
 	AddOperation(ADD, ArgumentsList(2, INT, INT));
 	AddOperation(SUB, ArgumentsList(2, INT, INT));
+	AddOperation(THREADS, ArgumentsList(2, STRING, STRING));
 }
 
 std::vector<InterpreterClass::TypesEnum> InterpreterClass::ArgumentsList(size_t n, ...)
@@ -54,8 +58,10 @@ void InterpreterClass::AddOperation(CommandsEnum command, std::vector<Interprete
 
 std::vector<std::string> InterpreterClass::GetLexemsFromString(const std::string& commandLine)
 {
+	typedef  boost::char_separator<char> Separators;
+	Separators sep("() ");
 	std::vector<std::string> lexems;
-	boost::tokenizer<> tok(commandLine);
+	boost::tokenizer<Separators> tok(commandLine,sep);
 	std::copy(tok.begin(), tok.end(), std::back_inserter(lexems));
 	return lexems;
 }
@@ -67,15 +73,27 @@ void InterpreterClass::RunCommand(const std::string& commandLine)
 	try
 	{
 		Functor f = CreateFunctor(lexems);
-		f();
+		if (lexems[0] == "RunThreads")
+		{
+			boost::thread v(f);
+			v.join();
+		} else
+		{
+			f();
+		}
 	}
 	catch(const InvalidLexemNumberException&)
 	{
-		
+		std::cout << "Invalid number parameters" << std::endl;
 	}
+	
 	catch(const std::bad_function_call&)
 	{
 		std::cout << "Bad functional call" << std::endl;
+	}
+	catch(const std::runtime_error& ia)
+	{
+		std::cout << ia.what() << std::endl;
 	}
 }
 
@@ -93,6 +111,9 @@ Operation* InterpreterClass::GetOperation(CommandsEnum command)
 		break;
 	case PRINT:
 		op = new Print();
+		break;
+	case THREADS:
+		op = new RunThreads();
 		break;
 	}
 		return op;

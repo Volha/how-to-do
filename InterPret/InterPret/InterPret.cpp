@@ -5,25 +5,13 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "InterpreterClass.h"
+#include "RunThreads.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::string commandLine;
-	std::fstream f;
-	typedef std::shared_ptr<InterpreterClass> ICptr;
-	auto iC = std::make_shared<InterpreterClass>(); 
+	auto iC = std::make_shared<RunThreads>(); 
+	iC->RunFile("file.txt");
 	
-	f.open("file.txt");
-	if (f.is_open())
-	{
-		while(f.good())
-		{
-			getline(f, commandLine);
-			iC->RunCommand(commandLine);
-		}
-	}
- 	f.close();
 	return 0;
 }
 
