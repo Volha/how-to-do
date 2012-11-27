@@ -9,9 +9,9 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	auto iC = std::make_shared<RunThreads>(); 
-	iC->RunFile("file.txt");
-	
+	//auto iC = std::make_shared<RunThreads>(); 
+	RunThreads iC; 
+	iC.RunFile("file.txt");
 	return 0;
 }
 

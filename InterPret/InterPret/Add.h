@@ -17,20 +17,20 @@ public:
 		{
 			return Functor();
 		}
-		int a, b;
+		
 		try
 		{
-			a =  boost::lexical_cast<int>(lexems[1]);
-			b =  boost::lexical_cast<int>(lexems[2]);
+			int a =  boost::lexical_cast<int>(lexems[1]);
+			int b =  boost::lexical_cast<int>(lexems[2]);
+			return [=]()
+			{
+				std::cout << a + b << std::endl;
+			};
 		}
 		catch(boost::bad_lexical_cast& ia)
 		{
 			std::cout << ia.what() << std::endl;
-			return Functor();
 		}
-		return [=]()
-		{
-			std::cout << a + b << std::endl;
-		};
+		return Functor();
 	}
 };

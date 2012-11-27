@@ -11,6 +11,7 @@
 #include <boost\tokenizer.hpp>
 #include <boost\lexical_cast.hpp>
 #include <boost\thread.hpp>
+#include "ThreadPool.h"
 
 InterpreterClass::InterpreterClass()
 {
@@ -23,6 +24,7 @@ InterpreterClass::InterpreterClass()
 
 InterpreterClass::~InterpreterClass()
 {
+
 }
 
 void InterpreterClass::InitializeMap()
@@ -73,15 +75,9 @@ void InterpreterClass::RunCommand(const std::string& commandLine)
 	try
 	{
 		Functor f = CreateFunctor(lexems);
-		if (lexems[0] == "RunThreads")
-		{
-			boost::thread v(f);
-			v.join();
-		} else
-		{
-			f();
-		}
+		ThreadPool::Instance()->DoAsync(f);
 	}
+
 	catch(const InvalidLexemNumberException&)
 	{
 		std::cout << "Invalid number parameters" << std::endl;
@@ -116,7 +112,7 @@ Operation* InterpreterClass::GetOperation(CommandsEnum command)
 		op = new RunThreads();
 		break;
 	}
-		return op;
+	return op;
 }
 
 // std::function
@@ -127,6 +123,6 @@ InterpreterClass::Functor InterpreterClass::CreateFunctor(const std::vector<std:
 		throw std::runtime_error("Invalid command or parameters");
 	}
 	
-	Operation* op = GetOperation(m_strCommands.find(lexems[0])->second); // map.find
+	std::unique_ptr<Operation> op(GetOperation(m_strCommands.find(lexems[0])->second));
 	return op->BuildFunctorFromParameters(lexems);
 }
