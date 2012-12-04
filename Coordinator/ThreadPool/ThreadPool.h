@@ -29,5 +29,6 @@ private:
 	mutable Mutex m_mutex;
 	boost::condition_variable m_condition;
 	bool m_isWorking;
+	static ThreadPool* instance;
 };
 
