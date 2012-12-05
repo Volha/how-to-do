@@ -1,24 +1,22 @@
 #pragma once
 #include "Article.h"
-
+#include <iostream>
 
 class DotOperation : public Article
 {
 public:
-	 DotOperation()
+	DotOperation()
 	{
 		
 	};
 	
-	void RunArticle(std::stack<int>& globalStack) 
+	void RunArticle(std::stack<int>& globalStack, std::vector<std::string> tokens) 
 	{
-		if (globalStack.size() > 2)
+		if (globalStack.empty())
 		{
-			int a = globalStack.top();
-			globalStack.pop();
-			int b = globalStack.top();
-			globalStack.pop();
-			globalStack.push(a + b);
+			throw std::runtime_error("The stack is empty");
 		}
+		std::cout << globalStack.top() << std::endl;
+		globalStack.pop();
 	}
 };

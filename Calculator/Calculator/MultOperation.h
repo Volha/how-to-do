@@ -1,16 +1,14 @@
 #pragma once
 #include "Article.h"
 
-
-class AddOperation : public Article
+class MultOperation : public Article
 {
 public:
-	AddOperation()
+	MultOperation()
 	{
 		
 	};
-	
-	void RunArticle(std::stack<int>& globalStack, std::vector<std::string> tokens) 
+	void RunArticle(std::stack<int>& globalStack, std::vector<std::string> tokens)
 	{
 		if (globalStack.size() < 2)
 		{
@@ -21,6 +19,6 @@ public:
 		globalStack.pop();
 		int b = globalStack.top();
 		globalStack.pop();
-		globalStack.push(a + b);
+		globalStack.push(a * b);
 	}
 };

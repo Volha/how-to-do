@@ -17,7 +17,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		iC.RunInterpret(commandLine);
 	}
 	while (commandLine!= "exit");
-
 	return 0;
 }
 
