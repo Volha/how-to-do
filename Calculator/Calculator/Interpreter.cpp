@@ -13,11 +13,17 @@
 #include "ColonOperation.h"
 #include "RunOperation.h"
 
+
 Interpreter::Interpreter()
+
+{
+	m_stack = std::make_shared<std::stack<int>>();
+}
+
+Interpreter::~Interpreter()
 {
 	
 }
-
 
 void Interpreter::RunInterpret(const std::string& commandLine)
 {
@@ -26,7 +32,7 @@ void Interpreter::RunInterpret(const std::string& commandLine)
 	{
 		if (IsTokenNumber(*it))
 		{
-			m_stack.push(boost::lexical_cast<int>(*it));
+			m_stack->push(boost::lexical_cast<int>(*it));
 		}
 		else
 		{
@@ -111,17 +117,17 @@ Article* Interpreter::GetArticle(Dictinary::SimpleCommands command)
 
 Interpreter::Functor Interpreter::GetFunctor(Dictinary::SimpleCommands command)
 {
-	auto art = GetArticle(command);
-	
-	return [=]()
+	auto art = std::shared_ptr<Article>(GetArticle(command));
+	auto stack = m_stack;
+	auto tokens = m_tokens;
+	if (art == nullptr)
 	{
-		art->RunArticle(m_stack, m_tokens);
+		throw std::runtime_error("No operations found");
+	}
+	return [stack, tokens, art]()
+	{
+		art->RunArticle(stack, tokens);
 	};
-}
-
-std::stack<int>* Interpreter::GetStack()
-{
-	return &m_stack;
 }
 
 std::vector<std::string>* const Interpreter::GetTokens()
@@ -130,5 +136,5 @@ std::vector<std::string>* const Interpreter::GetTokens()
 }
 void Interpreter::PushStack(int i)
 {
-	m_stack.push(i);
+	m_stack->push(i);
 }

@@ -11,29 +11,40 @@ public:
 		
 	};
 
-	void RunArticle(std::stack<int>& globalStack, std::vector<std::string> tokens)
+	void RunArticle(std::shared_ptr<std::stack<int>> globalStack, std::vector<std::string> tokens)
 	{
-		if (globalStack.empty())
+		if (globalStack->size() < 2)
 		{
-			throw std::runtime_error("Stack is empty");
+			throw std::runtime_error("Invalid number of parameters");
 		}
 		auto it = std::find(tokens.begin(), tokens.end(), "run");
 		++it;
 		typedef boost::tokenizer<boost::char_separator<char>> TokenizeSep;
-		boost::char_separator<char> sep("()");
+		boost::char_separator<char> sep("()", ",");
 		TokenizeSep tok(*it, sep);
 
-		Interpreter interPr;
-		interPr.PushStack(globalStack.top());
-		globalStack.pop();
+		int firstForStack  = globalStack->top();
+		globalStack->pop();
+		int secondForStack = globalStack->top();
+		globalStack->pop();
+		std::string commandLine = *tok.begin();
+		
 		auto s = Dictinary::Instance()->GetDictinary()->find(*tok.begin());
-		if (s !=   Dictinary::Instance()->GetDictinary()->end())
+		if (s ==   Dictinary::Instance()->GetDictinary()->end())
 		{
-			for(size_t i = 0; i != s->second.size(); ++i)
-			{
+			std::cout << "Command haven't been found in dict" << std::endl;
+		}
+		else
+		{ 
 				try
 				{
-					auto f = interPr.GetFunctor(s->second[i]);
+					auto f = [=]()
+					{
+						Interpreter iP;
+						iP.PushStack(secondForStack);
+						iP.PushStack(firstForStack);
+						iP.RunInterpret(commandLine);
+					};
 					ThreadPool::GetInstance()->DoAsync(f);
 				}
 				catch(const std::runtime_error& ia)
@@ -41,14 +52,5 @@ public:
 					std::cout << ia.what() << std::endl;
 				}
 			}
-		}
-		else
-		{
-			std::cout << "Command haven't been found in dict" << std::endl;
-		}
-
-
 	}
-private:
-	std::stack<int> m_stack;
 };

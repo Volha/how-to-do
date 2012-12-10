@@ -5,7 +5,7 @@
 class Dictinary
 {
 public:
-	enum SimpleCommands {ADD, DOT, MOD, FOURTHTO1, THIRDTO1, MULT, DUP, COLON, RUNTHREAD};
+	enum SimpleCommands {ADD, DOT, MOD, FOURTHTO1, THIRDTO1, MULT, DUP, COLON, RUNOP, RUNTHREAD};
 	typedef std::map<std::string, std::vector<SimpleCommands>> DictinaryType;
 
 	static Dictinary* Instance();

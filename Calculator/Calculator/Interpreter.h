@@ -13,8 +13,9 @@ class Interpreter
 public:
 	typedef std::function<void()> Functor;
 	Interpreter();
+	~Interpreter();
 	void RunInterpret(const std::string& commandLine);
-	std::stack<int>* GetStack();
+	
 	void PushStack(int i);
 	std::vector<std::string>* const GetTokens();
 	Functor GetFunctor(Dictinary::SimpleCommands command);
@@ -26,7 +27,7 @@ private:
 	Article* GetArticle(Dictinary::SimpleCommands command);
 	void RunThread(const std::string& str);
 private:
-	std::stack<int> m_stack;
+	std::shared_ptr<std::stack<int>> m_stack;
 	std::vector<std::string> m_tokens;
 	
 };

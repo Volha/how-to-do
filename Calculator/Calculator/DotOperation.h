@@ -10,13 +10,13 @@ public:
 		
 	};
 	
-	void RunArticle(std::stack<int>& globalStack, std::vector<std::string> tokens) 
+	void RunArticle(std::shared_ptr<std::stack<int>> globalStack, std::vector<std::string> tokens) 
 	{
-		if (globalStack.empty())
+		if (globalStack->empty())
 		{
 			throw std::runtime_error("The stack is empty");
 		}
-		std::cout << globalStack.top() << std::endl;
-		globalStack.pop();
+		std::cout << globalStack->top() << std::endl;
+		globalStack->pop();
 	}
 };

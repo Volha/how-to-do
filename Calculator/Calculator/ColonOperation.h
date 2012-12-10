@@ -10,7 +10,7 @@ public:
 		
 	};
 	
-	void RunArticle(std::stack<int>& globalStack, std::vector<std::string> tokens) 
+	void RunArticle(std::shared_ptr<std::stack<int>> globalStack, std::vector<std::string> tokens) 
 	{
 		try
 			{

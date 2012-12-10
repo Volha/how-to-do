@@ -52,7 +52,6 @@ void Dictinary::AddOperationToDict(const std::string& name, std::vector<Dictinar
 void Dictinary::AddNewOperation(const std::vector<std::string> tokens)
 {
 	std::vector<Dictinary::SimpleCommands> params;
-	DictinaryType::iterator s;
 	auto colonItBegin = std::find(tokens.begin(), tokens.end(), ":");
 	auto colonItEnd = std::find(tokens.begin(), tokens.end(), ";");
 
@@ -67,11 +66,17 @@ void Dictinary::AddNewOperation(const std::vector<std::string> tokens)
 	}
 	for(auto it = ++colonItBegin; it != colonItEnd; ++it)
 	{
-		s = m_dictinary.find(*it);
-		if (s !=  m_dictinary.end())
+		DictinaryType::iterator s = m_dictinary.find(*it);
+		if (s ==  m_dictinary.end())
+		{
+			throw std::runtime_error(*it + " the dictinary doesn't contains this operation!");
+		}
+		else 
 		{
 			for(size_t j = 0; j < s->second.size(); ++j)
-			params.push_back(s->second[j]);
+			{
+				params.push_back(s->second[j]);
+			}
 		}
 	}
 	AddOperationToDict(*(--colonItBegin), std::move(params));
