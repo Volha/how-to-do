@@ -24,7 +24,7 @@ ThreadPool::~ThreadPool()
 {
 	SendStopWorking();
 	for(size_t i = 0; i < m_threads.size(); ++i)
-	{
+	{0
 		m_threads[i].join();
 	}
 }

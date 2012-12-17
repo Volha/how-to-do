@@ -2,6 +2,17 @@
 #include "ThreadPool.h"
 #include <iostream>
 
+ThreadPool* ThreadPool::instance = nullptr;
+ThreadPool::Mutex ThreadPool::m_mutex;
+
+ThreadPool* ThreadPool::GetInstance()
+{
+	if (instance == nullptr)
+	{
+		instance = new ThreadPool(3);
+	}
+	return instance;
+}
 
 ThreadPool::ThreadPool(int threadNumber)
 	: m_isWorking(true)
@@ -64,7 +75,7 @@ void ThreadPool::WaitUntilProcessAppears()
 {
 	Lock lock(m_mutex);
 	m_condition.wait(lock);
-};
+}
 
 ThreadPool::Functor ThreadPool::GetFunctor()
 {

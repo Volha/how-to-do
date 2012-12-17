@@ -14,10 +14,11 @@ class ThreadPool
 public:
 	typedef boost::function<void ()> Functor;
 
-	ThreadPool(int threadNumber);
+	static ThreadPool* GetInstance();
 	~ThreadPool();
 	void DoAsync(Functor f);
 private:
+	ThreadPool(int threadNumber);
 	void MonitorQueue();
 	Functor GetFunctor();
 	void SendStopCycle();
@@ -26,9 +27,10 @@ private:
 private:
 	std::vector<boost::thread> m_threads;
 	std::queue<Functor> m_queue;
-	mutable Mutex m_mutex;
 	boost::condition_variable m_condition;
 	bool m_isWorking;
 	static ThreadPool* instance;
+	static Mutex m_mutex;
+
 };
 
