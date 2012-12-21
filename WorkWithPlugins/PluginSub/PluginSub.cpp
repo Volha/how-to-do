@@ -6,10 +6,17 @@
 #include <iostream>
 
 PluginSub::PluginSub()
-	:m_name("SUB OPERATION: - ")
+	: m_name("SUB OPERATION: - ")
+	, m_ref(0)
 {
 	
 }
+
+PluginSub::~PluginSub()
+{
+	
+}
+
 void PluginSub::DoOperation(int a, int b)
 {
 	std::cout << a - b << std::endl;
@@ -18,6 +25,19 @@ void PluginSub::DoOperation(int a, int b)
 const std::string& PluginSub::GetNameOperation() const
 {
 	return m_name; 
+}
+
+void PluginSub::Init()
+{
+	++m_ref;
+}
+
+void PluginSub::Release()
+{
+	if(--m_ref == 0)
+	{
+		delete this;
+    }
 }
 
 HRESULT GetPlugin(IPlugin** pPlugin)
@@ -30,11 +50,11 @@ HRESULT GetPlugin(IPlugin** pPlugin)
  return E_FAIL;
 }
 
-HRESULT FreePlugin(IPlugin** pPlugin)
-{
-   if(!* pPlugin)
-      return E_FAIL;
-   delete *pPlugin;
-   *pPlugin = 0;
-   return S_OK;
-}
+//HRESULT FreePlugin(IPlugin** pPlugin)
+//{
+//   if(!* pPlugin)
+//      return E_FAIL;
+//   delete *pPlugin;
+//   *pPlugin = 0;
+//   return S_OK;
+//}

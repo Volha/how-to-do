@@ -25,7 +25,6 @@ HModuleWrapper::~HModuleWrapper()
  HModuleWrapper::operator bool () const
  {
 	return m_module != 0;
-
  }
 
 FARPROC HModuleWrapper::GetProcedure(LPCSTR funcName)

@@ -1,0 +1,4 @@
+LIBRARY "AddOperation.dll"
+EXPORTS
+ DllGetClassObject   PRIVATE
+

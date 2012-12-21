@@ -66,13 +66,13 @@ int _tmain  (int argc, _TCHAR* argv[])
 				throw std::runtime_error("The command or plugin didn't find");
 			}
 			HRESULT hr = pfnPlugin(&pPlugin);
-			pPlugin->DoOperation(2, 3);
-			std::cout << pPlugin->GetNameOperation() << std::endl;
-
-			FREEPLUGIN pfnFree = (FREEPLUGIN)loadedPlugins[i].GetProcedure("FreePlugin");
-			if(pfnFree != 0)
+			if (!FAILED(hr))
 			{
-				pfnFree(&pPlugin);
+				pPlugin->DoOperation(2, 3);
+				std::cout << pPlugin->GetNameOperation() << std::endl;
+
+				pPlugin->Release();
+				pPlugin = nullptr;
 			}
 		}
 	}

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WhatIsCOM", "WhatIsCOM\WhatIsCOM.vcxproj", "{B7C82945-C708-4DFA-AEB2-76133203410C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AddOperation", "AddOperation\AddOperation.vcxproj", "{563F7B51-E688-45CC-93EE-DF52045D7631}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7C82945-C708-4DFA-AEB2-76133203410C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B7C82945-C708-4DFA-AEB2-76133203410C}.Debug|Win32.Build.0 = Debug|Win32
+		{B7C82945-C708-4DFA-AEB2-76133203410C}.Release|Win32.ActiveCfg = Release|Win32
+		{B7C82945-C708-4DFA-AEB2-76133203410C}.Release|Win32.Build.0 = Release|Win32
+		{563F7B51-E688-45CC-93EE-DF52045D7631}.Debug|Win32.ActiveCfg = Debug|Win32
+		{563F7B51-E688-45CC-93EE-DF52045D7631}.Debug|Win32.Build.0 = Debug|Win32
+		{563F7B51-E688-45CC-93EE-DF52045D7631}.Release|Win32.ActiveCfg = Release|Win32
+		{563F7B51-E688-45CC-93EE-DF52045D7631}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
