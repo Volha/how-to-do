@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../WhatIsCOM/IPluginOp.h"
+#include "IPluginOp.h"
 
 class SubOperation : public IPluginOp
 {
@@ -10,7 +10,7 @@ public:
 	ULONG STDMETHODCALLTYPE Release();
 
 	SubOperation();
-	void DoOperation(int a, int b);
+	double DoOperation(int a, int b);
 	const std::string& GetNameOperation() const;
 
 private: 

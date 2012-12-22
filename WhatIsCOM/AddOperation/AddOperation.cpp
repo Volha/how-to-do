@@ -12,9 +12,9 @@ AddOperation::AddOperation()
 	
 }
 
-void AddOperation::DoOperation(int a, int b)
+double AddOperation::DoOperation(int a, int b)
 {
-	std::cout << a + b << std::endl;
+	return a + b;
 }
 
 const std::string& AddOperation::GetNameOperation() const

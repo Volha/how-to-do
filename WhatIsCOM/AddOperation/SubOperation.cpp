@@ -9,9 +9,9 @@
 	
 }
 
-void  SubOperation::DoOperation(int a, int b)
+double SubOperation::DoOperation(int a, int b)
 {
-	std::cout << a - b << std::endl;
+	return a - b;
 }
 
 const std::string&  SubOperation::GetNameOperation() const

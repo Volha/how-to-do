@@ -1,5 +1,5 @@
 #pragma once
-#include "../WhatIsCOM/IPluginOp.h"
+#include "IPluginOp.h"
 
 class AddOperation : public IPluginOp
 {
@@ -9,7 +9,7 @@ public:
 	ULONG STDMETHODCALLTYPE Release();
 
 	AddOperation();
-	void DoOperation(int a, int b);
+	double DoOperation(int a, int b);
 	const std::string& GetNameOperation() const;
 
 private: 
