@@ -259,11 +259,48 @@ public:
 	virtual ~EventSink(){};
 };
 
+class EventSink2 : public IMyEvents
+{
+	virtual HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void **ppvObject)
+	{
+		if ((riid == IID_IMyEvents) || (riid == IID_IUnknown))
+		{
+			*ppvObject = reinterpret_cast<IMyEvents*>(this);
+			AddRef();
+			return S_OK;
+		}
+		return E_NOINTERFACE;
+	}
+	virtual ULONG STDMETHODCALLTYPE AddRef( void)
+	{
+		return 1;
+	}
+	virtual ULONG STDMETHODCALLTYPE Release( void)
+	{
+		return 0;
+	}
+	virtual HRESULT OnError(DWORD error)
+	{
+		MessageBoxA(
+					NULL,
+					"ERRRRORRRRR",
+					"Result",
+					MB_OK | 
+					MB_DEFBUTTON1 |
+					MB_ICONERROR | 
+					MB_DEFAULT_DESKTOP_ONLY);
+		return S_OK;
+	}
+public:
+	virtual ~EventSink2(){};
+};
+
 BOOL DoOperat(HWND hWnd,const IID& riid)
 {
 	CoInitialize(NULL);
 	{
 		EventSink eventSink;
+		EventSink2 eventSink2;
 		DWORD cookie = 0;
 		CComPtr<IPluginOp> pCF;
 		HRESULT hr = CoCreateInstance(riid, NULL, CLSCTX_INPROC, IID_IPluginOp,(void**) &pCF); 
@@ -274,12 +311,14 @@ BOOL DoOperat(HWND hWnd,const IID& riid)
 
 				CComPtr<IConnectionPoint> cp;
 				CComQIPtr<IConnectionPointContainer> cpCont(pCF);
+
 				if (cpCont)
 				{
 					hr = cpCont->FindConnectionPoint(IID_IMyEvents, &cp);
 					if (SUCCEEDED(hr))
 					{
 						hr = cp->Advise(&eventSink, &cookie);
+						hr = cp->Advise(&eventSink2, &cookie);
 					}
 				}
 				long double result  = pCF->DoOperation(param1, param2);
@@ -296,6 +335,7 @@ BOOL DoOperat(HWND hWnd,const IID& riid)
 			}
 			
 		}
+
 	CoUninitialize();
 	return TRUE;
 }
