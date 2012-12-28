@@ -5,7 +5,12 @@
 #include "COMandWIN32.h"
 #include <vector>
 #include <atlcomcli.h>
+#include <commctrl.h>
+#include <InitGuid.h>
 #include "../../WhatIsCOM/AddOperation/IPluginOp.h"
+#include <string>
+#include "../../WhatIsCOM/AddOperation/IMyEvent.h"
+
 #define MAX_LOADSTRING 100
 
 // Global Variables:
@@ -18,7 +23,7 @@ ATOM				MyRegisterClass(HINSTANCE hInstance);
 BOOL				InitInstance(HINSTANCE, int);
 LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
-BOOL				DoOperation(HWND hWnd);
+BOOL				DoOperat(HWND,const IID& riid );
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
                      LPTSTR    lpCmdLine,
@@ -138,7 +143,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	int wmId, wmEvent;
 	PAINTSTRUCT ps;
 	HDC hdc;
-
+	
 	switch (message)
 	{
 	case WM_COMMAND:
@@ -151,7 +156,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
 			break;
 		case ID_FILE_ADDOPERATION:
-			DoOperation(hWnd);
+			DoOperat(hWnd, CLSID_AddOp);
+			break;
+			
+		case ID_FILE_SUBOPERQATION:
+			DoOperat(hWnd, CLSID_SubOp);
+			break;
+
+		case ID_FILE_DIVOPERATION:
+			DoOperat(hWnd, CLSID_DivOp);
 			break;
 		case IDM_EXIT:
 			DestroyWindow(hWnd);
@@ -162,15 +175,28 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
+
 		// TODO: Add any drawing code here...
 		EndPaint(hWnd, &ps);
 		break;
+	case WM_CREATE:
+		{
+		HWND hEdit = CreateWindowEx(WS_EX_CLIENTEDGE, L"EDIT", L"", 
+		WS_CHILD | WS_VISIBLE | ES_NUMBER, 
+		100, 100, 30, 30, hWnd, (HMENU)IDC_MAIN_EDIT1, GetModuleHandle(NULL), NULL);
+		hEdit = CreateWindowEx(WS_EX_CLIENTEDGE, L"EDIT", L"", 
+		WS_CHILD | WS_VISIBLE | ES_NUMBER, 
+		200, 100, 30, 30, hWnd, (HMENU)IDC_MAIN_EDIT2, GetModuleHandle(NULL), NULL);
+		
+		}
+		 break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
+	
 	return 0;
 }
 
@@ -196,30 +222,81 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 	return (INT_PTR)FALSE;
 }
 
-BOOL DoOperation(HWND hWnd)
-{
-	std::vector<CComPtr<IPluginOp>> vectPlugins;
-	CComPtr<IPluginOp> pCF;
-	HRESULT hr = CoCreateInstance(CLSID_AddOp, NULL, CLSCTX_INPROC, IID_IPluginOp,(void**) &pCF); 
 
+class EventSink : public IMyEvents
+{
+	virtual HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void **ppvObject)
+	{
+		if ((riid == IID_IMyEvents) || (riid == IID_IUnknown))
+		{
+			*ppvObject = reinterpret_cast<IMyEvents*>(this);
+			AddRef();
+			return S_OK;
+		}
+		return E_NOINTERFACE;
+	}
+	virtual ULONG STDMETHODCALLTYPE AddRef( void)
+	{
+		return 1;
+	}
+	virtual ULONG STDMETHODCALLTYPE Release( void)
+	{
+		return 0;
+	}
+	virtual HRESULT OnError(DWORD error)
+	{
+		MessageBoxA(
+					NULL,
+					"Division into zeroo",
+					"Result",
+					MB_OK | 
+					MB_DEFBUTTON1 |
+					MB_ICONERROR | 
+					MB_DEFAULT_DESKTOP_ONLY);
+		return S_OK;
+	}
+public:
+	virtual ~EventSink(){};
+};
+
+BOOL DoOperat(HWND hWnd,const IID& riid)
+{
+	CoInitialize(NULL);
+	{
+		EventSink eventSink;
+		DWORD cookie = 0;
+		CComPtr<IPluginOp> pCF;
+		HRESULT hr = CoCreateInstance(riid, NULL, CLSCTX_INPROC, IID_IPluginOp,(void**) &pCF); 
 		if (SUCCEEDED(hr))
-	{ 
-		vectPlugins.push_back(pCF);
-	}
-	pCF = nullptr;
-	hr = CoCreateInstance(CLSID_SubOp, NULL, CLSCTX_INPROC, IID_IPluginOp,(void**) &pCF);
-	if (SUCCEEDED(hr))
-	{
-		vectPlugins.push_back(pCF);
-	}
-	pCF = nullptr;
-	hr =  CoCreateInstance(CLSID_DivOp, NULL, CLSCTX_INPROC, IID_IPluginOp,(void**) &pCF);
-	if (SUCCEEDED(hr))
-	{
-		vectPlugins.push_back(pCF);
-	}
-	
-	double result  = vectPlugins[0]->DoOperation(100, 4);
-	
+		{ 
+			int param1 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT1, NULL, TRUE);
+			int param2 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT2, NULL, TRUE);
+
+				CComPtr<IConnectionPoint> cp;
+				CComQIPtr<IConnectionPointContainer> cpCont(pCF);
+				if (cpCont)
+				{
+					hr = cpCont->FindConnectionPoint(IID_IMyEvents, &cp);
+					if (SUCCEEDED(hr))
+					{
+						hr = cp->Advise(&eventSink, &cookie);
+					}
+				}
+				long double result  = pCF->DoOperation(param1, param2);
+				std::string str = std::to_string(result);
+				MessageBoxA(
+					NULL,
+					(LPCSTR)&str,
+					"Result",
+					MB_OK | 
+					MB_DEFBUTTON1 |
+					MB_ICONERROR | 
+					MB_DEFAULT_DESKTOP_ONLY);
+				cp->Unadvise(cookie);
+			}
+			
+		}
+	CoUninitialize();
 	return TRUE;
 }
+

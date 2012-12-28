@@ -92,6 +92,11 @@
   <ItemGroup>
     <ResourceCompile Include="COMandWIN32.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WhatIsCOM\AddOperation\AddOperation.vcxproj">
+      <Project>{563f7b51-e688-45cc-93ee-df52045d7631}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
