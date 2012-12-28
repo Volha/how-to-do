@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include <InitGuid.h>
 #include "AddOperation.h"
 #include <iostream>
 
@@ -30,7 +31,6 @@ HRESULT AddOperation::QueryInterface(REFIID riid, void** ppv)
 		AddRef();
 		return (S_OK);
 	}
-	
 	return (E_NOINTERFACE);
 }
 

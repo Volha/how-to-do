@@ -2,6 +2,7 @@
 #include "AddOperationFactory.h"
 #include "AddOperation.h"
 #include "SubOperationFactory.h"
+#include "DivOperationFactory.h"
 
 long g_lObjs = 0;
 long g_lLocks = 0;
@@ -12,6 +13,7 @@ AddOperationFactory::AddOperationFactory()
 {
 	
 }
+
 AddOperationFactory* AddOperationFactory::GetInstance()
 {
 	if (m_instance == nullptr)
@@ -27,6 +29,7 @@ ULONG STDMETHODCALLTYPE AddOperationFactory::Release( )
 	if ( m_ref == 0 )
 	{
 		delete this;
+		m_instance = nullptr;
 		return 0;
 	}
 	else
@@ -82,7 +85,7 @@ STDAPI DllGetClassObject( REFCLSID rclsid, REFIID riid, void** ppv )
 	HRESULT hr;
 	CComPtr<IOperationFactory> iPtr = nullptr;
 	
-	if ((rclsid != CLSID_AddOp) && (rclsid != CLSID_SubOp))
+	if ((rclsid != CLSID_AddOp) && (rclsid != CLSID_SubOp) && (rclsid != CLSID_DivOp))
 	{
 		return (E_FAIL);
 	}
@@ -92,7 +95,11 @@ STDAPI DllGetClassObject( REFCLSID rclsid, REFIID riid, void** ppv )
 	}
 	if (rclsid == CLSID_SubOp)
 	{
-		iPtr = SubOperationFactory::GetInstnace();
+		iPtr = SubOperationFactory::GetInstance();
+	}
+	if (rclsid == CLSID_DivOp)
+	{
+		iPtr = DivOperationFactory::GetInstance();
 	}
 	if (iPtr == 0)
 	{

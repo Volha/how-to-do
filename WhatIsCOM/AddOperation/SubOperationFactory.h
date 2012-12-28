@@ -8,7 +8,7 @@ class SubOperationFactory : public IOperationFactory
 public:
 	
 	virtual ~SubOperationFactory(){};
-	static SubOperationFactory* GetInstnace();
+	static SubOperationFactory* GetInstance();
 	HRESULT STDMETHODCALLTYPE QueryInterface (REFIID riid, void** ppv);
 	ULONG STDMETHODCALLTYPE AddRef();
 	ULONG STDMETHODCALLTYPE Release();

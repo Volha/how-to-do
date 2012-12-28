@@ -6,7 +6,7 @@ long    g1_lObjs = 0;
 long    g1_lLocks = 0;
 SubOperationFactory* SubOperationFactory::m_instance = nullptr;
 
-SubOperationFactory* SubOperationFactory::GetInstnace()
+SubOperationFactory* SubOperationFactory::GetInstance()
 {
 	if (m_instance == nullptr)
 	{
@@ -27,6 +27,7 @@ ULONG STDMETHODCALLTYPE SubOperationFactory::Release( )
 	if ( m_ref == 0 )
 	{
 		delete this;
+		m_instance = nullptr;
 		return 0;
 	}
 	else

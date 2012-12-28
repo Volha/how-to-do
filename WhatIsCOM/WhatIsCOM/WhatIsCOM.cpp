@@ -30,7 +30,7 @@ std::vector<CComPtr<IPluginOp>> LoadPlugins()
 		vectPlugins.push_back(pCF);
 	}
 	pCF = nullptr;
-		hr = GetAndCreateObj(CLSID_DivOp, (void**) &pCF);
+	hr = GetAndCreateObj(CLSID_DivOp, (void**) &pCF);
 	if (SUCCEEDED(hr))
 	{
 		vectPlugins.push_back(pCF);
@@ -49,6 +49,13 @@ void DoOperation(const std::vector<CComPtr<IPluginOp>>& pcf)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	CoInitialize(NULL);
+	{
+		std::vector<CComPtr<IPluginOp>> pcVec =  LoadPlugins();
+		DoOperation(pcVec);
+	}
+	CoUninitialize();
+	
 	CoInitialize(NULL);
 	{
 		std::vector<CComPtr<IPluginOp>> pcVec =  LoadPlugins();

@@ -4,6 +4,7 @@
 class IOperationFactory : public IClassFactory
 {
 public:
+
 	virtual ~IOperationFactory(){};
 	virtual HRESULT STDMETHODCALLTYPE CreateInstance(IUnknown* pUnkOuter, REFIID riid, void** ppvObj) = 0;
 };

@@ -82,6 +82,7 @@
     <ClInclude Include="AddOperationFactory.h" />
     <ClInclude Include="DivOperation.h" />
     <ClInclude Include="DivOperationFactory.h" />
+    <ClInclude Include="IMyEvent.h" />
     <ClInclude Include="IOperationFactory.h" />
     <ClInclude Include="IPluginOp.h" />
     <ClInclude Include="stdafx.h" />
