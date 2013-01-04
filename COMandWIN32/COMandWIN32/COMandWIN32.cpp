@@ -10,6 +10,9 @@
 #include "../../WhatIsCOM/AddOperation/IPluginOp.h"
 #include <string>
 #include "../../WhatIsCOM/AddOperation/IMyEvent.h"
+#include "../AddOperationATL/AddOperationATL_i.h"
+#include "../AddOperationATL/AddOperationATL_i.c"
+#include <boost\thread.hpp>
 
 #define MAX_LOADSTRING 100
 
@@ -24,6 +27,8 @@ BOOL				InitInstance(HINSTANCE, int);
 LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 BOOL				DoOperat(HWND,const IID& riid );
+BOOL				RunThreadOperat(HWND hWnd);
+
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
                      LPTSTR    lpCmdLine,
@@ -166,6 +171,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_FILE_DIVOPERATION:
 			DoOperat(hWnd, CLSID_DivOp);
 			break;
+		case ID_FILE_ATLDIVOPERATION:
+			DoOperat(hWnd, CLSID_DivOperation);
+			break;
+		case ID_FILE_MTA:
+			RunThreadOperat(hWnd);
+			break;
 		case IDM_EXIT:
 			DestroyWindow(hWnd);
 			break;
@@ -295,48 +306,96 @@ public:
 	virtual ~EventSink2(){};
 };
 
-BOOL DoOperat(HWND hWnd,const IID& riid)
+BOOL DoOperat(HWND hWnd,const CLSID& clsid)
 {
 	CoInitialize(NULL);
 	{
 		EventSink eventSink;
 		EventSink2 eventSink2;
 		DWORD cookie = 0;
-		CComPtr<IPluginOp> pCF;
-		HRESULT hr = CoCreateInstance(riid, NULL, CLSCTX_INPROC, IID_IPluginOp,(void**) &pCF); 
+		CComPtr<IDivOperation> pCF;
+		HRESULT hr = CoCreateInstance(clsid, NULL, CLSCTX_INPROC, IID_IDivOperation, (void**) &pCF); 
 		if (SUCCEEDED(hr))
 		{ 
-			int param1 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT1, NULL, TRUE);
-			int param2 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT2, NULL, TRUE);
+			short param1 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT1, NULL, TRUE);
+			short param2 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT2, NULL, TRUE);
 
-				CComPtr<IConnectionPoint> cp;
-				CComQIPtr<IConnectionPointContainer> cpCont(pCF);
+			CComPtr<IConnectionPoint> cp;
+			CComQIPtr<IConnectionPointContainer> cpCont(pCF);
 
-				if (cpCont)
+			if (cpCont)
+			{
+				hr = cpCont->FindConnectionPoint(IID_IMyEvents, &cp);
+				if (SUCCEEDED(hr))
 				{
-					hr = cpCont->FindConnectionPoint(IID_IMyEvents, &cp);
-					if (SUCCEEDED(hr))
-					{
-						hr = cp->Advise(&eventSink, &cookie);
-						hr = cp->Advise(&eventSink2, &cookie);
-					}
+					hr = cp->Advise(&eventSink, &cookie);
+					hr = cp->Advise(&eventSink2, &cookie);
 				}
-				long double result  = pCF->DoOperation(param1, param2);
-				std::string str = std::to_string(result);
-				MessageBoxA(
-					NULL,
-					(LPCSTR)&str,
-					"Result",
-					MB_OK | 
-					MB_DEFBUTTON1 |
-					MB_ICONERROR | 
-					MB_DEFAULT_DESKTOP_ONLY);
+			}
+			double result = 0;
+			hr = pCF->DoOperation(param1, param2, &result);
+			std::string str = std::to_string(static_cast<long double>(result));
+			MessageBoxA(
+				NULL,
+				str.c_str(),
+				"Result",
+				MB_OK | 
+				MB_DEFBUTTON1 |
+				MB_ICONINFORMATION | 
+				MB_DEFAULT_DESKTOP_ONLY);
+			if (cp)
+			{
 				cp->Unadvise(cookie);
 			}
-			
 		}
-
+	}
 	CoUninitialize();
 	return TRUE;
 }
 
+std::unique_ptr<boost::thread> mtaThread;
+
+BOOL RunThreadOperat(HWND hWnd)
+{
+	short param1 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT1, NULL, TRUE);
+	short param2 = GetDlgItemInt(hWnd, IDC_MAIN_EDIT2, NULL, TRUE);
+	if (mtaThread)
+	{
+		mtaThread->join();
+	}
+	mtaThread.reset(new boost::thread([&]()
+	{
+		//CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);//)
+		CoInitializeEx(NULL, COINIT_MULTITHREADED);
+		CComPtr<IDivOperation> pCF;
+		//MULTI_QI m_qi;
+
+		//COSERVERINFO si = { 0, L"AddOperationATL", NULL, 0};
+		//m_qi.pIID = &IID_IDivOperation;
+		//m_qi.pItf = NULL;
+		//m_qi.hr = 0;
+		//HRESULT hr = CoCreateInstanceEx(CLSID_DivOperation,
+		//NULL,
+		//CLSCTX_,
+		//NULL,
+		//1, 
+		//&m_qi);
+		HRESULT hr = CoCreateInstance(CLSID_DivOperation, NULL, CLSCTX_INPROC, IID_IDivOperation, (void**) &pCF); 
+		if (SUCCEEDED(hr))
+		{ 
+			double result = 0;
+			hr = pCF->DoOperation(param1, param2, &result);
+			std::string str = std::to_string(static_cast<long double>(result));
+			MessageBoxA(
+				NULL,
+				str.c_str(),
+				"Result",
+				MB_OK | 
+				MB_DEFBUTTON1 |
+				MB_ICONINFORMATION | 
+				MB_DEFAULT_DESKTOP_ONLY);
+		}
+		CoUninitialize();
+	}));
+	return TRUE;
+}
