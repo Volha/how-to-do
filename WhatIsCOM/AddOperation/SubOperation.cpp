@@ -9,14 +9,16 @@
 	
 }
 
-double SubOperation::DoOperation(int a, int b)
+HRESULT SubOperation::DoOperation(int a, int b, long double& res)
 {
-	return a - b;
+	res = a - b;
+	return S_OK;
 }
 
-const std::string&  SubOperation::GetNameOperation() const
+HRESULT SubOperation::GetNameOperation(BSTR* name)
 {
-	return m_name; 
+	*name = CComBSTR(m_name.c_str()).Detach();
+	return S_OK;
 }
 
 HRESULT  SubOperation::QueryInterface(REFIID riid, void** ppv)
@@ -25,7 +27,7 @@ HRESULT  SubOperation::QueryInterface(REFIID riid, void** ppv)
 	{
 		*ppv = this;
 		AddRef();
-		return (S_OK);
+		return S_OK;
 	}
 	
 	return (E_NOINTERFACE);

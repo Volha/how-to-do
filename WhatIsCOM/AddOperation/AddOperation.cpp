@@ -13,14 +13,19 @@ AddOperation::AddOperation()
 	
 }
 
-double AddOperation::DoOperation(int a, int b)
+
+HRESULT AddOperation::DoOperation(int a, int b, long double& res)
 {
-	return a + b;
+	res = a + b;
+	return S_OK;
 }
 
-const std::string& AddOperation::GetNameOperation() const
+HRESULT AddOperation::GetNameOperation(BSTR* name)
 {
-	return m_name; 
+	//*name = SysAllocString(m_name.c_str());//_com_util::ConvertStringToBSTR(m_name.c_str());
+	CComBSTR s(m_name.c_str());
+	*name = s.Detach();
+	return S_OK;
 }
 
 HRESULT AddOperation::QueryInterface(REFIID riid, void** ppv)

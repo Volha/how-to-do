@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {0882B6B4-F8DB-430E-BE99-42F27706B51A} = s 'LongTask Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			TypeLib = s '{417BC596-AF1C-4DBA-8AE6-71E45F251B03}'
+			Version = s '1.0'
+		}
+	}
+}

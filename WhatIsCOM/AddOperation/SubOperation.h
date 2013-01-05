@@ -10,8 +10,8 @@ public:
 	ULONG STDMETHODCALLTYPE Release();
 
 	SubOperation();
-	double DoOperation(int a, int b);
-	const std::string& GetNameOperation() const;
+	HRESULT DoOperation(int a, int b, long double& res);
+	HRESULT GetNameOperation(BSTR* name);
 
 private: 
 	std::string m_name;
