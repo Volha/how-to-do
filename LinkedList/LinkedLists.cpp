@@ -133,6 +133,21 @@ int FindMergeNode(Node *headA, Node *headB)
     
 }
 
+Node* AddLists(Node* list1, Node* list2, int addition)
+{
+	Node* res;
+	if (!list1 && !list2 && addition == 0)
+	{
+		return NULL;
+	}
+	int value = list1->value + list2->value + addition;
+	res->value = value % 10;
+	if (list1 || list2)
+	{
+		res->next = AddLists(list1 ? list1->next: NULL, list2? list2->next: NULL, value / 10);
+	}
+	return res;
+}
 
 void Print(Node* head)
 {
